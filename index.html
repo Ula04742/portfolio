@@ -8,12 +8,8 @@
 </head>
 <body>
   <div class="wrap">
-    <!-- Header: compact badge only on left -->
+    <!-- Header: nav centered, no left logo -->
     <header class="site-header" role="banner">
-      <div class="brand">
-        <div class="logo" aria-hidden="true">LW</div>
-      </div>
-
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -33,21 +29,28 @@
       </div>
     </header>
 
-    <!-- Hero: HR-focused card (no duplication with About) -->
+    <!-- Hero: 40/60 layout (left minimal, right HR-priority) -->
     <section id="home" class="hero-hr card">
       <div class="hr-left">
         <div class="role-pill">Senior IT Operations & Automation Specialist</div>
-        <div class="headline">Delivering reliable automation and resilient IT operations across banking and e‑commerce</div>
+        <div class="headline">Operational resilience, pragmatic automation, cross‑branch delivery</div>
+        <div class="hr-left-note muted">Positioning: automation lead / operations specialist — quick scan for recruiters</div>
       </div>
 
       <div class="hr-right">
         <div class="lang-en">
-          <p class="hr-summary">Proven track record building 20+ automation tools that saved 500+ hours/year, led cross‑border system integrations, and executed BCP during critical outages. Looking for roles that value operational resilience, automation at scale, and pragmatic engineering.</p>
+          <p class="hr-summary">Proven track record building 20+ automation tools that saved 500+ hours/year, leading cross‑border integrations and executing BCP during critical outages. I focus on pragmatic, maintainable automation that reduces risk and scales across teams.</p>
 
           <div class="hr-stats">
             <div class="stat"><strong>20+</strong><span>automation tools</span></div>
             <div class="stat"><strong>500+</strong><span>hours saved / year</span></div>
             <div class="stat"><strong>2</strong><span>branches supported</span></div>
+          </div>
+
+          <div class="hr-skills">
+            <div class="pill">Power Automate · RPA</div>
+            <div class="pill">SharePoint & Integration</div>
+            <div class="pill">BCP & Operational Resilience</div>
           </div>
 
           <div class="hr-actions">
@@ -57,12 +60,18 @@
         </div>
 
         <div class="lang-zh hidden">
-          <p class="hr-summary">已建立 20+ 自動化工具，每年節省 500+ 小時；主導跨國系統整合，並在關鍵停電時執行 BCP。尋找重視自動化與營運韌性的職務。</p>
+          <p class="hr-summary">已建立 20+ 自動化工具，每年節省 500+ 小時；主導跨國系統整合並在關鍵停電時執行 BCP。專注於可維運、降低風險且可擴展的自動化解決方案。</p>
 
           <div class="hr-stats">
             <div class="stat"><strong>20+</strong><span>自動化工具</span></div>
             <div class="stat"><strong>500+</strong><span>每年節省小時</span></div>
             <div class="stat"><strong>2</strong><span>支援分行</span></div>
+          </div>
+
+          <div class="hr-skills">
+            <div class="pill">Power Automate · RPA</div>
+            <div class="pill">SharePoint 與整合</div>
+            <div class="pill">BCP 與營運韌性</div>
           </div>
 
           <div class="hr-actions">
@@ -73,7 +82,7 @@
       </div>
     </section>
 
-    <!-- About: LinkedIn-style long about; quotes always English -->
+    <!-- About -->
     <section id="about" class="section">
       <h2>About / 關於我</h2>
       <div class="card about-card">
@@ -85,8 +94,6 @@
           <p>Previously, I managed large‑scale O2O and system integration projects at momo (Fubon Media Technology), working with cross‑functional teams and external vendors to deliver enterprise‑level solutions. My background also includes system analysis, software development support, and academic teaching assistance in multimedia and web technologies.</p>
 
           <p>I am committed to continuous learning and technical growth. I completed Stanford University’s selective Code in Place program, strengthening my algorithmic thinking and automation‑related problem‑solving skills.</p>
-
-          <p>I enjoy building tools that make work easier, designing efficient workflows, and helping teams adopt modern digital solutions.</p>
         </div>
 
         <div class="lang-zh hidden">
@@ -97,11 +104,9 @@
           <p>先前在富邦媒體科技 momo，我負責大型 O2O 與系統整合專案，與跨職能團隊及外部廠商協作，交付企業級解決方案。背景亦包含系統分析、軟體開發支援與多媒體與網頁技術的教學助理經驗。</p>
 
           <p>我致力於持續學習與技術成長，完成史丹佛大學 Code in Place 精選課程，強化演算法思維與自動化相關問題解決能力。</p>
-
-          <p>我喜歡打造讓工作更輕鬆的工具、設計高效流程，並協助團隊採用現代化的數位解決方案。</p>
         </div>
 
-        <!-- Quotes: always English -->
+        <!-- Quotes always English -->
         <div class="about-quotes always-en">
           <blockquote>
             <p>"Nothing is impossible, the word itself says 'I'm possible!'"</p>
@@ -116,46 +121,41 @@
       </div>
     </section>
 
-    <!-- Experience: vertical curve timeline; nodes alternate left/right; More expands -->
+    <!-- Experience: vertical nodes without center line; nodes alternate left/right -->
     <section id="experience" class="section">
       <h2>Experience / 經歷</h2>
 
       <div class="timeline-card card">
-        <!-- Vertical SVG curve (responsive) -->
-        <svg class="timeline-svg" viewBox="0 0 400 1200" preserveAspectRatio="none" aria-hidden="true">
-          <defs>
-            <linearGradient id="vg" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0" stop-color="#1E4D3A" stop-opacity="0.12"/>
-              <stop offset="1" stop-color="#1F3A5F" stop-opacity="0.08"/>
-            </linearGradient>
-          </defs>
-          <!-- vertical bezier-like path -->
-          <path id="vCurve" d="M200,40 C200,120 120,200 200,280 C280,360 120,440 200,520 C280,600 120,680 200,760 C280,840 120,920 200,1000" fill="none" stroke="url(#vg)" stroke-width="6" stroke-linecap="round"/>
-          <path id="vCurveAnim" d="M200,40 C200,120 120,200 200,280 C280,360 120,440 200,520 C280,600 120,680 200,760 C280,840 120,920 200,1000" fill="none" stroke="#C9A86A" stroke-width="2" stroke-linecap="round" stroke-dasharray="0 4000"/>
-        </svg>
+        <!-- decorative particle layer (pure CSS) -->
+        <div class="particle-layer" aria-hidden="true"></div>
 
         <div class="timeline-items">
-          <!-- Full work experiences (expanded) -->
+          <!-- item 1 -->
           <article class="timeline-item" data-index="1">
-            <div class="node" aria-hidden="true"></div>
+            <div class="node">
+              <div class="node-badge">ES</div>
+            </div>
             <div class="content">
               <h3>E.SUN Bank Australia — IT Officer</h3>
               <div class="timeplace">Sydney & Brisbane · 2023–Present</div>
               <p class="summary">Lead IT operations and automation across two branches; design and deliver workflow automation, SharePoint portals, and BCP execution.</p>
               <div class="more-content hidden">
                 <ul>
-                  <li>Developed 20+ automation tools (Power Automate, VBA, RPA, .bat) covering daily folder generation, patch progress tracking, asset management, email report downloads, and weekly IT reporting — collectively saving 500+ hours/year.</li>
-                  <li>Designed and implemented SharePoint branch portal for internal communications, document control, and audit trails; integrated with AD and automated provisioning flows.</li>
-                  <li>Led cloud migration tasks (IaaS/PaaS/SaaS) for non‑production workloads and supported vendor coordination for core banking upgrades.</li>
-                  <li>Activated BCP during a building outage (Dec 2023), restoring critical services within 1–2 hours and coordinating cross‑branch continuity plans.</li>
+                  <li>Developed 20+ automation tools (Power Automate, VBA, RPA, .bat) for folder generation, patch tracking, asset management, email report downloads, and weekly IT reporting — collectively saving 500+ hours/year.</li>
+                  <li>Designed SharePoint branch portal integrated with AD; automated provisioning flows and role‑based access control to reduce onboarding time by ~40%.</li>
+                  <li>Built monitoring and alerting for critical processes; introduced retry logic and centralized logs to reduce incident MTTR by ~30%.</li>
+                  <li>Led cloud migration tasks for non‑production workloads and coordinated vendor upgrades for core banking; executed BCP during a building outage, restoring critical services within 1–2 hours.</li>
                 </ul>
               </div>
               <div class="item-actions"><button class="btn-more" aria-expanded="false">More</button></div>
             </div>
           </article>
 
+          <!-- item 2 -->
           <article class="timeline-item alt" data-index="2">
-            <div class="node" aria-hidden="true"></div>
+            <div class="node">
+              <div class="node-badge">MO</div>
+            </div>
             <div class="content">
               <h3>Fubon Media Technology (momo.com) — Overseas Development PM</h3>
               <div class="timeplace">Taiwan & Thailand · 2017–2019</div>
@@ -163,32 +163,39 @@
               <div class="more-content hidden">
                 <ul>
                   <li>Coordinated cross‑border engineering and operations teams to adapt momo’s architecture to local payment, logistics, and regulatory requirements.</li>
-                  <li>Delivered technical training, created runbooks, and implemented monitoring dashboards to improve operational stability.</li>
+                  <li>Delivered technical training, created runbooks, and implemented monitoring dashboards; reduced incident recurrence by improving runbook coverage.</li>
+                  <li>Led vendor integration and acceptance testing for payment gateways and logistics APIs.</li>
                 </ul>
               </div>
               <div class="item-actions"><button class="btn-more" aria-expanded="false">More</button></div>
             </div>
           </article>
 
+          <!-- item 3 -->
           <article class="timeline-item" data-index="3">
-            <div class="node" aria-hidden="true"></div>
+            <div class="node">
+              <div class="node-badge">PM</div>
+            </div>
             <div class="content">
-              <h3>Fubon Media Technology (momo.com) — Project Manager</h3>
+              <h3>Fubon Media Technology — Project Manager</h3>
               <div class="timeplace">Taiwan · 2015–2017</div>
               <p class="summary">Led O2O electronic ticketing platform integration and order management improvements.</p>
               <div class="more-content hidden">
                 <ul>
                   <li>Managed 30+ engineers and multiple vendors to integrate website, app, payment, logistics, SCM, and ECM systems for O2O ticketing.</li>
-                  <li>Authored R&D investment tax credit reports for four consecutive years, saving the company NT$3M annually.</li>
-                  <li>Introduced monthly sales & traffic analysis reports and SEO improvements to increase conversion and reduce CS workload.</li>
+                  <li>Authored R&D investment tax credit reports for four consecutive years, saving NT$3M annually.</li>
+                  <li>Introduced monthly analytics and SEO improvements that increased conversion and reduced CS workload.</li>
                 </ul>
               </div>
               <div class="item-actions"><button class="btn-more" aria-expanded="false">More</button></div>
             </div>
           </article>
 
+          <!-- item 4 -->
           <article class="timeline-item alt" data-index="4">
-            <div class="node" aria-hidden="true"></div>
+            <div class="node">
+              <div class="node-badge">AI</div>
+            </div>
             <div class="content">
               <h3>Australian Innovative Alliance — IT Project Manager</h3>
               <div class="timeplace">Sydney · 2014–2015</div>
@@ -203,8 +210,11 @@
             </div>
           </article>
 
+          <!-- item 5 -->
           <article class="timeline-item" data-index="5">
-            <div class="node" aria-hidden="true"></div>
+            <div class="node">
+              <div class="node-badge">IN</div>
+            </div>
             <div class="content">
               <h3>Interinfo Software — Assistant Analyst</h3>
               <div class="timeplace">Taiwan · 2013–2014</div>
@@ -218,8 +228,11 @@
             </div>
           </article>
 
+          <!-- item 6 -->
           <article class="timeline-item alt" data-index="6">
-            <div class="node" aria-hidden="true"></div>
+            <div class="node">
+              <div class="node-badge">CS</div>
+            </div>
             <div class="content">
               <h3>CyberSoft Digital Services — Banking IT Intern</h3>
               <div class="timeplace">Taiwan · 2012</div>
@@ -233,8 +246,11 @@
             </div>
           </article>
 
+          <!-- item 7 -->
           <article class="timeline-item" data-index="7">
-            <div class="node" aria-hidden="true"></div>
+            <div class="node">
+              <div class="node-badge">FJ</div>
+            </div>
             <div class="content">
               <h3>Fu Jen Catholic University — Teaching Assistant</h3>
               <div class="timeplace">Taiwan · 2011–2013</div>
@@ -248,8 +264,11 @@
             </div>
           </article>
 
+          <!-- item 8 -->
           <article class="timeline-item alt" data-index="8">
-            <div class="node" aria-hidden="true"></div>
+            <div class="node">
+              <div class="node-badge">NO</div>
+            </div>
             <div class="content">
               <h3>National Open University — Teaching Assistant</h3>
               <div class="timeplace">Taiwan · 2011–2013</div>
@@ -263,8 +282,11 @@
             </div>
           </article>
 
+          <!-- item 9 -->
           <article class="timeline-item" data-index="9">
-            <div class="node" aria-hidden="true"></div>
+            <div class="node">
+              <div class="node-badge">NS</div>
+            </div>
             <div class="content">
               <h3>National Science and Technology Council — Research Assistant</h3>
               <div class="timeplace">Taiwan · 2009–2011</div>
@@ -278,8 +300,11 @@
             </div>
           </article>
 
+          <!-- item 10 -->
           <article class="timeline-item alt" data-index="10">
-            <div class="node" aria-hidden="true"></div>
+            <div class="node">
+              <div class="node-badge">CV</div>
+            </div>
             <div class="content">
               <h3>Campus E-Service Volunteer Team — Volunteer Instructor</h3>
               <div class="timeplace">Taiwan · 2010–2011</div>
@@ -297,18 +322,18 @@
       </div>
     </section>
 
-    <!-- Skills: three pillars (expanded descriptions) -->
+    <!-- Skills -->
     <section id="skills" class="section">
       <h2>Skills / 專業技能</h2>
       <div class="skills-grid">
         <div class="skill-card card">
           <h3>Automation Engineering</h3>
-          <p>Design and implement reliable automation using Power Automate, VBA, RPA and scripting. Emphasis on observability, error handling, and maintainability for production use.</p>
+          <p>Power Automate, VBA, RPA; design for observability, retry logic, and maintainability. Delivered production flows that reduced manual reconciliation and improved SLA adherence.</p>
         </div>
 
         <div class="skill-card card">
           <h3>Systems & Integration</h3>
-          <p>Integrate banking systems, e‑commerce platforms, SharePoint and middleware. Experience with API orchestration, vendor integration, and cross‑branch data flows.</p>
+          <p>SharePoint, APIs, middleware and cross‑branch data flows; experience integrating banking systems, e‑commerce platforms and vendor services with robust error handling.</p>
         </div>
 
         <div class="skill-card card">
@@ -335,7 +360,7 @@
       </div>
     </section>
 
-    <!-- Education: expanded -->
+    <!-- Education -->
     <section id="education" class="section">
       <h2>Education / 學歷</h2>
       <div class="card">
@@ -398,7 +423,7 @@
     </footer>
   </div>
 
-  <!-- Scripts: language toggle, vertical curve draw, reveal, More expand -->
+  <!-- Scripts: language toggle, reveal, More expand -->
   <script>
     // Language toggle
     (function(){
@@ -435,28 +460,7 @@
       }
     })();
 
-    // Vertical curve draw animation when timeline enters viewport
-    (function(){
-      const path = document.getElementById('vCurveAnim');
-      const card = document.querySelector('.timeline-card');
-      if(!path || !card) return;
-      const length = path.getTotalLength();
-      path.style.strokeDasharray = length + ' ' + length;
-      path.style.strokeDashoffset = length;
-
-      const obs = new IntersectionObserver(entries=>{
-        entries.forEach(e=>{
-          if(e.isIntersecting){
-            path.style.transition = 'stroke-dashoffset 1.2s ease-in-out';
-            path.style.strokeDashoffset = '0';
-            obs.disconnect();
-          }
-        });
-      }, {threshold: 0.12});
-      obs.observe(card);
-    })();
-
-    // Scroll reveal for timeline items (vertical)
+    // Reveal timeline items on scroll (vertical)
     (function(){
       const items = document.querySelectorAll('.timeline-item');
       const io = new IntersectionObserver((entries)=>{
@@ -464,7 +468,7 @@
           if(entry.isIntersecting){
             entry.target.classList.add('reveal');
             const idx = Array.from(items).indexOf(entry.target);
-            entry.target.style.transitionDelay = (idx * 80) + 'ms';
+            entry.target.style.transitionDelay = (idx * 60) + 'ms';
           }
         });
       }, {threshold: 0.18});
