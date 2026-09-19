@@ -70,8 +70,49 @@ body{
 /* Card */
 .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 10px 30px rgba(31,58,95,0.04)}
 
-/* Timeline, Skills, Education, Certifications styles unchanged (kept from previous version) */
-/* ... (rest of CSS remains the same) ... */
+/* About quotes */
+.about-quotes.always-en{margin-top:14px}
+blockquote{margin:0;padding:12px 14px;border-left:4px solid var(--accent);background:linear-gradient(90deg,rgba(201,168,106,0.04),transparent);border-radius:8px}
+blockquote p{margin:0;font-style:italic}
+blockquote footer{margin-top:8px;font-size:0.9rem;color:var(--muted)}
+
+/* Timeline */
+.timeline-card{position:relative;overflow:visible;padding:18px}
+.timeline-items{position:relative;padding-top:8px;display:flex;flex-direction:column;gap:26px}
+.timeline-item{display:flex;gap:18px;align-items:flex-start;position:relative;padding:16px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfbfb);box-shadow:0 8px 22px rgba(31,58,95,0.04);transition:transform .36s cubic-bezier(.2,.9,.2,1),box-shadow .36s ease,opacity .4s ease;opacity:0; transform:translateY(18px)}
+.timeline-item.reveal{opacity:1;transform:translateY(0)}
+.timeline-item.alt{margin-left:0}
+.node.simple-dot{width:18px;height:18px;border-radius:50%;background:linear-gradient(180deg,var(--accent),#e0c47a);border:4px solid var(--primary);box-shadow:0 8px 26px rgba(201,168,106,0.18);flex:0 0 18px;margin-top:10px;position:relative;animation:nodePulse 2.6s infinite}
+@keyframes nodePulse{0%{transform:scale(1)}50%{transform:scale(1.06)}100%{transform:scale(1)}}
+.content{flex:1}
+.content h3{margin:0 0 6px;font-size:1.06rem;color:var(--primary)}
+.content .timeplace{font-size:0.9rem;color:var(--muted);margin-bottom:8px}
+.content .summary{margin:0 0 8px;color:var(--muted)}
+.more-content{margin-top:8px}
+.more-content.hidden{display:none}
+.item-actions{margin-top:8px}
+.btn-more{background:transparent;border:1px solid var(--primary);color:var(--primary);padding:6px 10px;border-radius:8px;cursor:pointer}
+
+/* Skills grid */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.skill-card{padding:16px;border-radius:12px;background:linear-gradient(180deg,#fff,#fcfcfc);box-shadow:0 8px 22px rgba(31,58,95,0.04)}
+.skill-card h3{margin:0 0 8px;color:var(--primary)}
+.skill-card p{margin:0;color:var(--muted)}
+
+/* Education list */
+.edu-list{list-style:disc;padding-left:18px}
+.edu-list > li > ul{list-style:circle;padding-left:18px;margin-top:6px}
+
+/* Certifications grid */
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px}
+.cert-item{display:flex;gap:12px;align-items:center;padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fcfcfc);box-shadow:0 8px 22px rgba(31,58,95,0.04)}
+.cert-logo{width:48px;height:48px;display:flex;align-items:center;justify-content:center}
+.cert-logo img{max-width:100%;max-height:100%;object-fit:contain}
+.cert-meta .cert-title{font-weight:700}
+.cert-date{font-size:0.9rem;color:var(--muted)}
+
+/* Footer */
+.site-footer{text-align:center;padding:18px 0;color:var(--muted);font-size:0.9rem}
 
 /* Back to top */
 .back-to-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:10px;border:0;background:var(--primary);color:#fff;font-size:18px;cursor:pointer;box-shadow:0 10px 30px rgba(31,58,95,0.12);opacity:0;transform:translateY(8px);transition:opacity .28s ease,transform .28s ease;z-index:90}
