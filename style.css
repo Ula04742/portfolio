@@ -29,15 +29,16 @@ body{
 /* Header */
 .site-header{
   display:flex;align-items:center;justify-content:center;gap:20px;
-  padding:12px 20px;border-radius:12px;background:linear-gradient(90deg,var(--primary),var(--secondary));
+  padding:18px 20px;border-radius:12px;background:linear-gradient(90deg,var(--primary),var(--secondary));
   color:#fff;box-shadow:var(--shadow);position:sticky;top:12px;z-index:40;
+  min-height:72px; /* increased height */
 }
-.main-nav{display:flex;gap:12px;align-items:center;position:absolute;left:50%;transform:translateX(-50%)}
-.main-nav a{color:rgba(255,255,255,0.95);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600;font-size:0.95rem}
+.main-nav{display:flex;gap:14px;align-items:center;position:absolute;left:50%;transform:translateX(-50%)}
+.main-nav a{color:rgba(255,255,255,0.95);text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:700;font-size:0.98rem}
 .main-nav a:hover{background:rgba(255,255,255,0.06)}
-.header-right{position:absolute;right:28px;top:12px;display:flex;align-items:center;gap:10px}
+.header-right{position:absolute;right:28px;top:14px;display:flex;align-items:center;gap:10px}
 .lang-toggle{display:flex;gap:8px}
-.lang-btn{border:0;background:transparent;color:#fff;padding:6px 10px;border-radius:999px;cursor:pointer;font-weight:700;opacity:0.95}
+.lang-btn{border:0;background:transparent;color:#fff;padding:8px 12px;border-radius:999px;cursor:pointer;font-weight:800;opacity:0.95}
 .lang-btn.active{background:var(--accent);color:#111}
 
 /* Hero */
@@ -47,8 +48,9 @@ body{
 .name-block{padding:6px}
 .person-name{font-weight:900;font-size:1.25rem;color:var(--primary)}
 .person-title{font-size:0.85rem;color:var(--muted);margin-top:6px;line-height:1.25}
-.contact-inline{margin-top:10px}
-.linkedin-link{color:var(--primary);font-weight:700;text-decoration:none}
+.contact-inline{margin-top:12px;display:flex;align-items:center;gap:12px}
+.btn-linkedin{display:inline-block;background:linear-gradient(90deg,var(--accent),#d9b86a);color:#111;padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:800}
+.location{font-size:0.9rem;color:var(--muted)}
 .hero-right{flex:1;padding:14px}
 .headline{font-size:1.05rem;font-weight:700;color:var(--primary)}
 .hr-summary{margin:12px 0;color:var(--muted)}
@@ -79,7 +81,7 @@ blockquote footer{margin-top:8px;font-size:0.9rem;color:var(--muted)}
 .timeline-items{position:relative;padding-top:8px;display:flex;flex-direction:column;gap:26px}
 .timeline-item{display:flex;gap:18px;align-items:flex-start;position:relative;padding:16px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfbfb);box-shadow:0 8px 22px rgba(31,58,95,0.04);transition:transform .36s cubic-bezier(.2,.9,.2,1),box-shadow .36s ease,opacity .4s ease;opacity:0; transform:translateY(18px)}
 .timeline-item.reveal{opacity:1;transform:translateY(0)}
-.timeline-item.alt{margin-left:48px}
+.timeline-item.alt{margin-left:0} /* momo unified: no alternating for momo entries */
 .node.simple-dot{width:18px;height:18px;border-radius:50%;background:linear-gradient(180deg,var(--accent),#e0c47a);border:4px solid var(--primary);box-shadow:0 8px 26px rgba(201,168,106,0.18);flex:0 0 18px;margin-top:10px;position:relative;animation:nodePulse 2.6s infinite}
 @keyframes nodePulse{0%{transform:scale(1)}50%{transform:scale(1.06)}100%{transform:scale(1)}}
 .content{flex:1}
@@ -105,6 +107,7 @@ blockquote footer{margin-top:8px;font-size:0.9rem;color:var(--muted)}
 .cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px}
 .cert-item{display:flex;gap:12px;align-items:center;padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fcfcfc);box-shadow:0 8px 22px rgba(31,58,95,0.04)}
 .cert-logo{width:48px;height:48px;display:flex;align-items:center;justify-content:center}
+.cert-logo img{max-width:100%;max-height:100%;object-fit:contain}
 .cert-meta .cert-title{font-weight:700}
 .cert-date{font-size:0.9rem;color:var(--muted)}
 
