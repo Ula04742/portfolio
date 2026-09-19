@@ -106,7 +106,7 @@ blockquote footer{margin-top:8px;font-size:0.9rem;color:var(--muted)}
 /* Certifications grid */
 .cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px}
 .cert-item{display:flex;gap:12px;align-items:center;padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fcfcfc);box-shadow:0 8px 22px rgba(31,58,95,0.04)}
-.cert-logo{width:60px;height:60px;display:flex;align-items:center;justify-content:center}
+.cert-logo{width:80px;height:80px;display:flex;align-items:center;justify-content:center}
 .cert-logo img{max-width:100%;max-height:100%;object-fit:contain}
 .cert-meta .cert-title{font-weight:700}
 .cert-date{font-size:0.9rem;color:var(--muted)}
