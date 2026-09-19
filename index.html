@@ -3,9 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Li‑Wen | AI‑Driven Automation & IT Operations Specialist</title>
-
-  <!-- External stylesheet (already in your repo as style.css) -->
+  <title>Ula | AI‑Driven Automation & IT Operations Specialist</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,17 +11,16 @@
     <!-- Header -->
     <header class="site-header">
       <div class="brand">
-        <div class="logo">Ula</div>
-        <div>
+        <div class="logo" aria-hidden="true">LW</div>
+        <div class="brand-text">
           <div class="title">Ulan</div>
           <div class="subtitle">AI‑Driven Automation & IT Operations Specialist</div>
         </div>
       </div>
 
       <nav class="main-nav" aria-label="Main navigation">
-        <!-- Menu labels remain English per your request -->
         <a href="#home">Home</a>
-        <a href="#about">About</a> 
+        <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#portfolio">Portfolio</a>
@@ -32,9 +29,11 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <div class="lang-toggle" role="tablist" aria-label="Language switch">
-        <button id="btn-en" class="lang-btn active" aria-pressed="true">EN</button>
-        <button id="btn-zh" class="lang-btn" aria-pressed="false">中文</button>
+      <div class="header-right">
+        <div class="lang-toggle" role="tablist" aria-label="Language switch">
+          <button id="btn-en" class="lang-btn active" aria-pressed="true">EN</button>
+          <button id="btn-zh" class="lang-btn" aria-pressed="false">中文</button>
+        </div>
       </div>
     </header>
 
@@ -82,10 +81,9 @@
       </aside>
     </section>
 
-    <!-- About (integrated quotes) -->
+    <!-- About (with integrated quotes) -->
     <section id="about" class="section">
       <h2>About / 關於我</h2>
-
       <div class="card">
         <div class="lang-en">
           <p>
@@ -114,7 +112,6 @@
             I enjoy building tools that make work easier, designing efficient workflows, and helping teams adopt modern digital solutions.
           </p>
 
-          <!-- Integrated favorite quotes -->
           <div class="about-quotes">
             <blockquote>
               <p>"Nothing is impossible, the word itself says 'I'm possible!'"</p>
@@ -130,7 +127,7 @@
 
         <div class="lang-zh hidden">
           <p>
-            我是一名兼具營運與自動化開發的專業IT人員，擁有銀行、電商與企業系統整合的實務經驗。
+            我是一名具備營運與自動化開發的IT人員，擁有銀行、電商與企業系統整合的實務經驗。
             我的工作專注於提升營運效率、建置自動化解決方案，以及支援跨分行的 IT 營運環境。
             我結合技術問題解決與專案管理經驗，交付穩定、可擴展且具高影響力的解決方案。
           </p>
@@ -154,7 +151,6 @@
             我喜歡打造讓工作更輕鬆的工具、設計高效流程，並協助團隊採用現代化的數位解決方案。
           </p>
 
-          <!-- Integrated favorite quotes in Chinese -->
           <div class="about-quotes">
             <blockquote>
               <p>「沒有什麼是不可能的，這個字本身就說了『我是可能的！』」</p>
@@ -170,31 +166,70 @@
       </div>
     </section>
 
-    <!-- Experience (English menu labels retained) -->
+    <!-- Experience with SVG curved path + animated nodes -->
     <section id="experience" class="section">
-  <h2>Experience / 經歷</h2>
+      <h2>Experience / 經歷</h2>
 
-  <div class="experience-list">
-    <div class="experience-item">
-      <h3>E.SUN Bank Australia — IT Officer</h3>
-      <div class="timeplace">Sydney & Brisbane · 2023–Present</div>
-      <ul>
-        <li>Developed 20+ automation tools (Power Automate, VBA, RPA, .bat), reducing 500+ hours annually.</li>
-        <li>Built automation for daily folders, timetables, asset tracking, patch progress, audits, loan margin models, shutdown detection, laptop borrowing, email downloads, weekly IT reports.</li>
-      </ul>
-    </div>
+      <div class="card">
+        <div class="experience-wrap">
+          <!-- SVG curved path background -->
+          <svg class="timeline-svg" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0" stop-color="#1E4D3A" stop-opacity="0.12"/>
+                <stop offset="1" stop-color="#1F3A5F" stop-opacity="0.08"/>
+              </linearGradient>
+            </defs>
+            <path id="curve" d="M40,220 C220,40 420,260 600,120 C780,-20 980,200 1160,80" fill="none" stroke="url(#g1)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path id="curve-anim" d="M40,220 C220,40 420,260 600,120 C780,-20 980,200 1160,80" fill="none" stroke="#C9A86A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0 2000"/>
+          </svg>
 
-    <div class="experience-item alt">
-      <h3>Fubon Media Technology (momo.com) — Overseas Development PM</h3>
-      <div class="timeplace">Taiwan & Thailand · 2017–2019</div>
-      <ul>
-        <li>Supported Thailand’s e-commerce platform in adopting momo’s system architecture; delivered technical training and workflow alignment.</li>
-      </ul>
-    </div>
+          <!-- Timeline items (each node links to optional screenshot or external link) -->
+          <div class="timeline-items">
+            <div class="timeline-item" data-img="" data-link="">
+              <div class="node" aria-hidden="true"></div>
+              <div class="item-body">
+                <h3>E.SUN Bank Australia — IT Officer</h3>
+                <div class="timeplace">Sydney & Brisbane · 2023–Present</div>
+                <p>Developed 20+ automation tools (Power Automate, VBA, RPA), reduced 500+ hours annually; supported cloud migration, SharePoint, and BCP.</p>
+                <div class="item-actions">
+                  <button class="btn-node" data-img="" data-link="">View screenshot</button>
+                  <a class="btn-link" href="#" target="_blank" rel="noopener">More</a>
+                </div>
+              </div>
+            </div>
 
-    <!-- 複製 experience-item 塊，依序加入更多 -->
-  </div>
-</section>
+            <div class="timeline-item alt" data-img="" data-link="">
+              <div class="node" aria-hidden="true"></div>
+              <div class="item-body">
+                <h3>Fubon Media Technology (momo.com) — Overseas PM</h3>
+                <div class="timeplace">Taiwan & Thailand · 2017–2019</div>
+                <p>Led cross-border platform adoption, technical training, and system integration for e‑commerce expansion.</p>
+                <div class="item-actions">
+                  <button class="btn-node" data-img="" data-link="">View screenshot</button>
+                  <a class="btn-link" href="#" target="_blank" rel="noopener">More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-img="" data-link="">
+              <div class="node" aria-hidden="true"></div>
+              <div class="item-body">
+                <h3>Fubon Media Technology — Project Manager</h3>
+                <div class="timeplace">Taiwan · 2015–2017</div>
+                <p>Managed O2O ticketing integration and authored R&D tax credit reports saving NT$3M annually.</p>
+                <div class="item-actions">
+                  <button class="btn-node" data-img="" data-link="">View screenshot</button>
+                  <a class="btn-link" href="#" target="_blank" rel="noopener">More</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- add more timeline-item blocks as needed -->
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Skills -->
     <section id="skills" class="section">
@@ -202,119 +237,79 @@
       <div class="skills-grid">
         <div class="skill-card card">
           <h3>AI‑Driven Workflow Automation</h3>
-          <p>Design automation using Power Automate, VBA, RPA, Python, and M365 Copilot.</p>
-        </div>
-        <div class="skill-card card">
-          <h3>AI‑Assisted Development</h3>
-          <p>Use AI to brainstorm, debug, extend, and accelerate automation builds.</p>
+          <p>Power Automate, VBA, RPA, Python, M365 Copilot</p>
         </div>
         <div class="skill-card card">
           <h3>System Integration</h3>
-          <p>Connect banking systems, e‑commerce platforms, and enterprise tools.</p>
+          <p>Banking systems, e‑commerce platforms, SharePoint</p>
         </div>
         <div class="skill-card card">
           <h3>Workflow Optimization</h3>
-          <p>Redesign processes to reduce workload and improve efficiency.</p>
-        </div>
-        <div class="skill-card card">
-          <h3>IT Operations & Project Management</h3>
-          <p>Support system stability, cloud migration, and cross‑team delivery.</p>
+          <p>Process redesign, reporting automation, access workflows</p>
         </div>
       </div>
     </section>
 
-    <!-- Portfolio (examples; you can expand) -->
+    <!-- Portfolio (kept compact) -->
     <section id="portfolio" class="section">
       <h2>Portfolio / 作品集</h2>
-      <p class="muted">Selected automation tools I designed and built to solve real operational problems.</p>
-
       <div class="portfolio-grid">
         <article class="portfolio-card card">
           <h3>Daily Folder Automation</h3>
-          <div class="portfolio-tag">Power Automate · VBA · File System</div>
-          <p class="portfolio-desc">Automatically creates daily folders and sub‑structures for multiple departments, ensuring consistent naming and auditability.</p>
-          <ul class="portfolio-meta">
-            <li><strong>Problem:</strong> Manual folder creation caused inconsistency and wasted time.</li>
-            <li><strong>Solution:</strong> Automation script that generates folders based on date, department, and task type.</li>
-            <li><strong>Impact:</strong> Saved hours per month and improved traceability for audits.</li>
-          </ul>
+          <div class="portfolio-tag">Power Automate · VBA</div>
+          <p>Auto-create daily folders and sub-structures; consistent naming and auditability.</p>
         </article>
 
         <article class="portfolio-card card">
           <h3>Loan Margin Model Automation</h3>
-          <div class="portfolio-tag">VBA · Banking · Risk</div>
-          <p class="portfolio-desc">Automated loan margin calculations based on predefined risk and product parameters, replacing manual spreadsheet work.</p>
-          <ul class="portfolio-meta">
-            <li><strong>Problem:</strong> Manual margin calculations were time‑consuming and error‑prone.</li>
-            <li><strong>Solution:</strong> VBA tool that standardizes inputs and outputs margin results instantly.</li>
-            <li><strong>Impact:</strong> Faster decision‑making and more consistent risk evaluation.</li>
-          </ul>
+          <div class="portfolio-tag">VBA · Banking</div>
+          <p>Standardized margin calculations to reduce errors and speed decisions.</p>
         </article>
-
-        <!-- Add more portfolio-card blocks for each tool -->
       </div>
     </section>
 
-    <!-- Education -->
+    <!-- Education & Certifications (kept brief) -->
     <section id="education" class="section">
       <h2>Education / 學歷</h2>
       <div class="card">
         <div class="lang-en">
           <h3>Fu Jen Catholic University — Master of Information Management</h3>
           <div class="timeplace">Taiwan · 2011–2013</div>
-          <ul>
-            <li>Published thesis: A Study of Students' Forum Behaviors in a Blended E-Learning Environment.</li>
-            <li>Published in the 19th Cross-Strait Information Management Symposium.</li>
-          </ul>
-
-          <h3 style="margin-top:14px">Aletheia University — Bachelor of Information Management</h3>
+          <h3 style="margin-top:12px">Aletheia University — Bachelor of Information Management</h3>
           <div class="timeplace">Taiwan · 2007–2011</div>
-          <ul>
-            <li>Government-funded AR Minnan Language Self-Learning System; awarded by National Science Council (NSC).</li>
-          </ul>
         </div>
-
         <div class="lang-zh hidden">
           <h3>輔仁大學 — 資訊管理碩士</h3>
           <div class="timeplace">台灣 · 2011–2013</div>
-          <ul>
-            <li>發表論文：混成式學習論壇行為研究；刊登於第十九屆兩岸資訊管理研討會。</li>
-          </ul>
-
-          <h3 style="margin-top:14px">真理大學 — 資訊管理學士</h3>
+          <h3 style="margin-top:12px">真理大學 — 資訊管理學士</h3>
           <div class="timeplace">台灣 · 2007–2011</div>
-          <ul>
-            <li>政府補助 AR 閩南語自學系統；獲國科會專案補助。</li>
-          </ul>
         </div>
       </div>
     </section>
 
-    <!-- Certifications -->
     <section id="certifications" class="section">
       <h2>Certifications / 證照</h2>
       <div class="card">
         <div class="lang-en">
           <ul>
-            <li>Cyber Safety & Safe AI Certification (Level 1–3) — Cyber Wardens · 2026</li>
-            <li>Stanford Code in Place — Stanford University · 2025</li>
-            <li>Project Management Essentials Certified (PMEC) — MSI · 2022</li>
-            <li>Oracle Certified Professional, Java SE 6 Programmer — Oracle · 2011</li>
+            <li>Cyber Safety & Safe AI Certification — Cyber Wardens</li>
+            <li>Stanford Code in Place — Stanford University</li>
+            <li>PMEC — MSI</li>
+            <li>Oracle Java SE 6 — Oracle</li>
           </ul>
         </div>
-
         <div class="lang-zh hidden">
           <ul>
-            <li>Cyber Safety & Safe AI（Level 1–3）— Cyber Wardens · 2026</li>
-            <li>Stanford Code in Place — 史丹佛大學 · 2025</li>
-            <li>專案管理基礎認證（PMEC）— MSI · 2022</li>
-            <li>Oracle Java SE 6 專業認證 — Oracle · 2011</li>
+            <li>Cyber Safety & Safe AI — Cyber Wardens</li>
+            <li>史丹佛 Code in Place — 史丹佛大學</li>
+            <li>專案管理基礎（PMEC）— MSI</li>
+            <li>Oracle Java SE 6 — Oracle</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Contact (simplified per your request) -->
+    <!-- Contact simplified -->
     <section id="contact" class="section">
       <h2>Contact</h2>
       <div class="card contact-list">
@@ -328,8 +323,22 @@
     </footer>
   </div>
 
-  <!-- Language toggle script -->
+  <!-- Modal for node screenshots / links -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-panel" role="document">
+      <button id="modal-close" class="modal-close" aria-label="Close">×</button>
+      <div id="modal-content">
+        <div class="modal-placeholder">
+          <p>No screenshot provided for this item.</p>
+          <p class="muted">You can add a screenshot URL to the node's <code>data-img</code> attribute or a link to <code>data-link</code>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
+    // Language toggle
     (function(){
       const btnEn = document.getElementById('btn-en');
       const btnZh = document.getElementById('btn-zh');
@@ -355,7 +364,6 @@
       btnEn.addEventListener('click', ()=> setLang('en'));
       btnZh.addEventListener('click', ()=> setLang('zh'));
 
-      // Initialize from localStorage or browser preference
       const saved = localStorage.getItem('site-lang');
       if(saved === 'zh') setLang('zh');
       else if(saved === 'en') setLang('en');
@@ -364,7 +372,57 @@
         if(lang.startsWith('zh')) setLang('zh'); else setLang('en');
       }
     })();
+
+    // Timeline SVG draw animation
+    (function(){
+      const path = document.getElementById('curve-anim');
+      if(path){
+        const length = path.getTotalLength();
+        path.style.strokeDasharray = length + ' ' + length;
+        path.style.strokeDashoffset = length;
+        // animate
+        setTimeout(()=> {
+          path.style.transition = 'stroke-dashoffset 1.6s ease-in-out';
+          path.style.strokeDashoffset = '0';
+        }, 300);
+      }
+    })();
+
+    // Modal logic for node screenshots / links
+    (function(){
+      const modal = document.getElementById('modal');
+      const modalBackdrop = document.getElementById('modal-backdrop');
+      const modalClose = document.getElementById('modal-close');
+      const modalContent = document.getElementById('modal-content');
+
+      function openModal(html){
+        modalContent.innerHTML = html;
+        modal.classList.remove('hidden');
+        modal.setAttribute('aria-hidden','false');
+      }
+      function closeModal(){
+        modal.classList.add('hidden');
+        modal.setAttribute('aria-hidden','true');
+      }
+
+      document.querySelectorAll('.btn-node').forEach(btn=>{
+        btn.addEventListener('click', (e)=>{
+          const img = btn.getAttribute('data-img') || btn.closest('.timeline-item').getAttribute('data-img');
+          const link = btn.getAttribute('data-link') || btn.closest('.timeline-item').getAttribute('data-link');
+          if(img){
+            openModal('<img src="'+img+'" alt="screenshot" style="max-width:100%;border-radius:8px;display:block;margin-bottom:12px"><div><a href="'+img+'" target="_blank" rel="noopener">Open image in new tab</a></div>');
+          } else if(link){
+            openModal('<div style="padding:12px"><p>Open external link:</p><p><a href="'+link+'" target="_blank" rel="noopener">'+link+'</a></p></div>');
+          } else {
+            openModal('<div class="modal-placeholder"><p>No screenshot provided for this item.</p><p class="muted">You can add a screenshot URL to the node\'s <code>data-img</code> attribute or a link to <code>data-link</code>.</p></div>');
+          }
+        });
+      });
+
+      modalClose.addEventListener('click', closeModal);
+      modalBackdrop.addEventListener('click', closeModal);
+      document.addEventListener('keydown', (e)=> { if(e.key === 'Escape') closeModal(); });
+    })();
   </script>
 </body>
 </html>
-```
