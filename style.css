@@ -47,10 +47,11 @@ body{
 .hero-left-inner{display:flex;flex-direction:column;gap:12px}
 .name-block{padding:6px}
 .person-name{font-weight:900;font-size:1.25rem;color:var(--primary)}
-.person-title{font-size:0.85rem;color:var(--muted);margin-top:6px;line-height:1.25}
+.person-meta{margin-top:6px}
+.person-location{font-size:0.95rem;color:var(--muted);margin-bottom:6px}
+.person-title{font-size:0.85rem;color:var(--muted);line-height:1.25}
 .contact-inline{margin-top:12px;display:flex;align-items:center;gap:12px}
 .btn-linkedin{display:inline-block;background:linear-gradient(90deg,var(--accent),#d9b86a);color:#111;padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:800}
-.location{font-size:0.9rem;color:var(--muted)}
 .hero-right{flex:1;padding:14px}
 .headline{font-size:1.05rem;font-weight:700;color:var(--primary)}
 .hr-summary{margin:12px 0;color:var(--muted)}
@@ -60,8 +61,6 @@ body{
 .stat span{display:block;color:var(--muted);font-size:0.9rem}
 .hr-skills{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
 .skill-pill{background:rgba(30,77,58,0.06);padding:8px 10px;border-radius:999px;color:var(--primary);font-weight:700}
-.hr-actions{display:flex;gap:10px;margin-top:12px}
-.btn-outline{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:10px 14px;border-radius:10px;text-decoration:none;color:var(--primary);font-weight:700}
 
 /* Sections */
 .section{padding:28px 0;border-bottom:1px solid rgba(0,0,0,0.03)}
@@ -81,7 +80,7 @@ blockquote footer{margin-top:8px;font-size:0.9rem;color:var(--muted)}
 .timeline-items{position:relative;padding-top:8px;display:flex;flex-direction:column;gap:26px}
 .timeline-item{display:flex;gap:18px;align-items:flex-start;position:relative;padding:16px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfbfb);box-shadow:0 8px 22px rgba(31,58,95,0.04);transition:transform .36s cubic-bezier(.2,.9,.2,1),box-shadow .36s ease,opacity .4s ease;opacity:0; transform:translateY(18px)}
 .timeline-item.reveal{opacity:1;transform:translateY(0)}
-.timeline-item.alt{margin-left:0} /* momo unified: no alternating for momo entries */
+.timeline-item.alt{margin-left:0}
 .node.simple-dot{width:18px;height:18px;border-radius:50%;background:linear-gradient(180deg,var(--accent),#e0c47a);border:4px solid var(--primary);box-shadow:0 8px 26px rgba(201,168,106,0.18);flex:0 0 18px;margin-top:10px;position:relative;animation:nodePulse 2.6s infinite}
 @keyframes nodePulse{0%{transform:scale(1)}50%{transform:scale(1.06)}100%{transform:scale(1)}}
 .content{flex:1}
