@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ula | AI‑Driven Automation & IT Operations Specialist</title>
+  <title>Li‑Wen Chen — Automation & IT Operations</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="wrap">
-    <!-- Header -->
-    <header class="site-header">
+    <!-- Header (compact, no photo) -->
+    <header class="site-header" role="banner">
       <div class="brand">
         <div class="logo" aria-hidden="true">LW</div>
         <div class="brand-text">
-          <div class="title">Ulan</div>
+          <div class="title">Li‑Wen Chen</div>
           <div class="subtitle">AI‑Driven Automation & IT Operations Specialist</div>
         </div>
       </div>
@@ -37,51 +37,52 @@
       </div>
     </header>
 
-    <!-- Hero -->
-    <section id="home" class="hero">
-      <div class="hero-left">
+    <!-- Hero / LinkedIn-like summary block (no image) -->
+    <section id="home" class="hero linkedIn-style">
+      <div class="li-left">
         <div class="lang-en">
-          <h1>Transforming ideas into automation</h1>
-          <p class="lead">Building systems that make work faster, smarter, and beautifully simple.</p>
-          <p class="timeplace">Based in Sydney, Australia</p>
-          <div class="tags">
-            <span class="tag">Power Automate</span>
-            <span class="tag">VBA</span>
-            <span class="tag">RPA</span>
-            <span class="tag">M365</span>
-            <span class="tag">System Integration</span>
-            <span class="tag">AI‑Assisted Development</span>
+          <div class="li-name">Li‑Wen Chen</div>
+          <div class="li-role">Project Manager · Senior IT Operations & Automation Specialist</div>
+          <div class="li-location">Killara, New South Wales, Australia</div>
+          <div class="li-contact">
+            <span>Sydney, Australia</span>
+            <span>·</span>
+            <a href="https://linkedin.com/in/ulachen" target="_blank" rel="noopener">linkedin.com/in/ulachen</a>
           </div>
         </div>
 
         <div class="lang-zh hidden">
-          <h1>把想法變成自動化</h1>
-          <p class="lead">打造更快、更穩、更聰明的工作系統。</p>
-          <p class="timeplace">現居澳洲雪梨</p>
-          <div class="tags">
-            <span class="tag">Power Automate</span>
-            <span class="tag">VBA</span>
-            <span class="tag">RPA</span>
-            <span class="tag">M365</span>
-            <span class="tag">系統整合</span>
-            <span class="tag">AI 輔助開發</span>
+          <div class="li-name">陳立文</div>
+          <div class="li-role">專案經理 · 資深 IT 營運與自動化專家</div>
+          <div class="li-location">新南威爾士州 Killara，澳洲</div>
+          <div class="li-contact">
+            <span>雪梨，澳洲</span>
+            <span>·</span>
+            <a href="https://linkedin.com/in/ulachen" target="_blank" rel="noopener">linkedin.com/in/ulachen</a>
           </div>
         </div>
       </div>
 
-      <aside class="hero-right card">
+      <div class="li-right">
         <div class="lang-en">
-          <h3>Quick Facts</h3>
-          <p>20+ automation tools · 500+ hours saved annually · Banking & e‑commerce experience</p>
+          <p class="li-summary">
+            I am an IT Operations & Automation Specialist with experience across banking, e‑commerce, and enterprise system integration.
+            My work focuses on improving operational efficiency, building automation solutions, and supporting cross‑branch IT environments.
+            I combine technical problem‑solving with project management experience to deliver stable, scalable, and high‑impact solutions.
+          </p>
         </div>
+
         <div class="lang-zh hidden">
-          <h3>快速資訊</h3>
-          <p>20+ 自動化工具 · 每年節省 500+ 小時 · 銀行與電商經驗</p>
+          <p class="li-summary">
+            我是一名 IT 營運與自動化開發專家，擁有銀行、電商與企業系統整合的實務經驗。
+            我的工作專注於提升營運效率、建置自動化解決方案，以及支援跨分行的 IT 營運環境。
+            我結合技術問題解決與專案管理經驗，交付穩定、可擴展且具高影響力的解決方案。
+          </p>
         </div>
-      </aside>
+      </div>
     </section>
 
-    <!-- About (with integrated quotes) -->
+    <!-- About (keeps LinkedIn about, integrates quotes) -->
     <section id="about" class="section">
       <h2>About / 關於我</h2>
       <div class="card">
@@ -127,7 +128,7 @@
 
         <div class="lang-zh hidden">
           <p>
-            我是一名具備營運與自動化開發的IT人員，擁有銀行、電商與企業系統整合的實務經驗。
+            我是一名 IT 營運與自動化開發專家，擁有銀行、電商與企業系統整合的實務經驗。
             我的工作專注於提升營運效率、建置自動化解決方案，以及支援跨分行的 IT 營運環境。
             我結合技術問題解決與專案管理經驗，交付穩定、可擴展且具高影響力的解決方案。
           </p>
@@ -166,72 +167,81 @@
       </div>
     </section>
 
-    <!-- Experience with SVG curved path + animated nodes -->
+    <!-- Experience: central curved timeline, nodes alternate left/right, expand on scroll, More expands details -->
     <section id="experience" class="section">
       <h2>Experience / 經歷</h2>
 
-      <div class="card">
-        <div class="experience-wrap">
-          <!-- SVG curved path background -->
-          <svg class="timeline-svg" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
-            <defs>
-              <linearGradient id="g1" x1="0" x2="1">
-                <stop offset="0" stop-color="#1E4D3A" stop-opacity="0.12"/>
-                <stop offset="1" stop-color="#1F3A5F" stop-opacity="0.08"/>
-              </linearGradient>
-            </defs>
-            <path id="curve" d="M40,220 C220,40 420,260 600,120 C780,-20 980,200 1160,80" fill="none" stroke="url(#g1)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-            <path id="curve-anim" d="M40,220 C220,40 420,260 600,120 C780,-20 980,200 1160,80" fill="none" stroke="#C9A86A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0 2000"/>
-          </svg>
+      <div class="timeline-card card">
+        <!-- SVG curve (responsive) -->
+        <svg class="timeline-svg" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
+          <path id="curvePath" d="M40,240 C220,40 420,260 600,120 C780,-20 980,200 1160,80" fill="none" stroke="rgba(30,77,58,0.12)" stroke-width="6" stroke-linecap="round"/>
+          <path id="curveAnim" d="M40,240 C220,40 420,260 600,120 C780,-20 980,200 1160,80" fill="none" stroke="#C9A86A" stroke-width="2" stroke-linecap="round" stroke-dasharray="0 2000"/>
+        </svg>
 
-          <!-- Timeline items (each node links to optional screenshot or external link) -->
-          <div class="timeline-items">
-            <div class="timeline-item" data-img="" data-link="">
-              <div class="node" aria-hidden="true"></div>
-              <div class="item-body">
-                <h3>E.SUN Bank Australia — IT Officer</h3>
-                <div class="timeplace">Sydney & Brisbane · 2023–Present</div>
-                <p>Developed 20+ automation tools (Power Automate, VBA, RPA), reduced 500+ hours annually; supported cloud migration, SharePoint, and BCP.</p>
-                <div class="item-actions">
-                  <button class="btn-node" data-img="" data-link="">View screenshot</button>
-                  <a class="btn-link" href="#" target="_blank" rel="noopener">More</a>
-                </div>
+        <div class="timeline-items">
+          <!-- item 1 -->
+          <article class="timeline-item" data-index="1">
+            <div class="node" aria-hidden="true"></div>
+            <div class="content">
+              <h3>E.SUN Bank Australia — IT Officer</h3>
+              <div class="timeplace">Sydney & Brisbane · 2023–Present</div>
+              <p class="summary">Developed 20+ automation tools (Power Automate, VBA, RPA), reduced hundreds of manual hours; supported cloud migration, SharePoint, and BCP.</p>
+              <div class="more-content hidden">
+                <ul>
+                  <li>Built automation for daily folders, timetables, asset tracking, patch progress, audits, loan margin models, shutdown detection, laptop borrowing, email downloads, weekly IT reports.</li>
+                  <li>Introduced M365 Copilot and delivered staff training; created automation agents for report downloads and system access workflows.</li>
+                  <li>Activated BCP independently during a building shutdown (Dec 2023), restoring operations within 1–2 hours.</li>
+                </ul>
+              </div>
+              <div class="item-actions">
+                <button class="btn-more" aria-expanded="false">More</button>
               </div>
             </div>
+          </article>
 
-            <div class="timeline-item alt" data-img="" data-link="">
-              <div class="node" aria-hidden="true"></div>
-              <div class="item-body">
-                <h3>Fubon Media Technology (momo.com) — Overseas PM</h3>
-                <div class="timeplace">Taiwan & Thailand · 2017–2019</div>
-                <p>Led cross-border platform adoption, technical training, and system integration for e‑commerce expansion.</p>
-                <div class="item-actions">
-                  <button class="btn-node" data-img="" data-link="">View screenshot</button>
-                  <a class="btn-link" href="#" target="_blank" rel="noopener">More</a>
-                </div>
+          <!-- item 2 (alternate side) -->
+          <article class="timeline-item alt" data-index="2">
+            <div class="node" aria-hidden="true"></div>
+            <div class="content">
+              <h3>Fubon Media Technology (momo.com) — Overseas Development PM</h3>
+              <div class="timeplace">Taiwan & Thailand · 2017–2019</div>
+              <p class="summary">Supported Thailand’s e‑commerce platform adoption of momo’s architecture; delivered technical training and workflow alignment.</p>
+              <div class="more-content hidden">
+                <ul>
+                  <li>Coordinated cross-border communication and collaborated with engineering teams to improve platform stability and efficiency.</li>
+                  <li>Localized platform logic and supported vendor integration.</li>
+                </ul>
+              </div>
+              <div class="item-actions">
+                <button class="btn-more" aria-expanded="false">More</button>
               </div>
             </div>
+          </article>
 
-            <div class="timeline-item" data-img="" data-link="">
-              <div class="node" aria-hidden="true"></div>
-              <div class="item-body">
-                <h3>Fubon Media Technology — Project Manager</h3>
-                <div class="timeplace">Taiwan · 2015–2017</div>
-                <p>Managed O2O ticketing integration and authored R&D tax credit reports saving NT$3M annually.</p>
-                <div class="item-actions">
-                  <button class="btn-node" data-img="" data-link="">View screenshot</button>
-                  <a class="btn-link" href="#" target="_blank" rel="noopener">More</a>
-                </div>
+          <!-- item 3 -->
+          <article class="timeline-item" data-index="3">
+            <div class="node" aria-hidden="true"></div>
+            <div class="content">
+              <h3>Fubon Media Technology — Project Manager</h3>
+              <div class="timeplace">Taiwan · 2015–2017</div>
+              <p class="summary">Led O2O ticketing platform integration; authored R&D tax credit reports saving NT$3M annually.</p>
+              <div class="more-content hidden">
+                <ul>
+                  <li>Managed 30+ engineers and multiple vendors; integrated order, payment, logistics, and SCM systems.</li>
+                </ul>
+              </div>
+              <div class="item-actions">
+                <button class="btn-more" aria-expanded="false">More</button>
               </div>
             </div>
+          </article>
 
-            <!-- add more timeline-item blocks as needed -->
-          </div>
+          <!-- add more items as needed; keep same structure -->
         </div>
       </div>
     </section>
 
-    <!-- Skills -->
+    <!-- Skills, Portfolio, Education, Certifications (kept compact) -->
     <section id="skills" class="section">
       <h2>Skills / 專業技能</h2>
       <div class="skills-grid">
@@ -250,7 +260,6 @@
       </div>
     </section>
 
-    <!-- Portfolio (kept compact) -->
     <section id="portfolio" class="section">
       <h2>Portfolio / 作品集</h2>
       <div class="portfolio-grid">
@@ -259,7 +268,6 @@
           <div class="portfolio-tag">Power Automate · VBA</div>
           <p>Auto-create daily folders and sub-structures; consistent naming and auditability.</p>
         </article>
-
         <article class="portfolio-card card">
           <h3>Loan Margin Model Automation</h3>
           <div class="portfolio-tag">VBA · Banking</div>
@@ -268,7 +276,6 @@
       </div>
     </section>
 
-    <!-- Education & Certifications (kept brief) -->
     <section id="education" class="section">
       <h2>Education / 學歷</h2>
       <div class="card">
@@ -319,24 +326,11 @@
     </section>
 
     <footer class="site-footer">
-      <div>© Li‑Wen · AI‑Driven Automation & IT Operations Specialist</div>
+      <div>© Li‑Wen Chen · Automation & IT Operations</div>
     </footer>
   </div>
 
-  <!-- Modal for node screenshots / links -->
-  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-backdrop" id="modal-backdrop"></div>
-    <div class="modal-panel" role="document">
-      <button id="modal-close" class="modal-close" aria-label="Close">×</button>
-      <div id="modal-content">
-        <div class="modal-placeholder">
-          <p>No screenshot provided for this item.</p>
-          <p class="muted">You can add a screenshot URL to the node's <code>data-img</code> attribute or a link to <code>data-link</code>.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <!-- Scripts: language toggle, timeline draw, scroll reveal, More expand -->
   <script>
     // Language toggle
     (function(){
@@ -373,55 +367,61 @@
       }
     })();
 
-    // Timeline SVG draw animation
+    // Animate SVG curve drawing
     (function(){
-      const path = document.getElementById('curve-anim');
-      if(path){
-        const length = path.getTotalLength();
-        path.style.strokeDasharray = length + ' ' + length;
-        path.style.strokeDashoffset = length;
-        // animate
-        setTimeout(()=> {
-          path.style.transition = 'stroke-dashoffset 1.6s ease-in-out';
-          path.style.strokeDashoffset = '0';
-        }, 300);
-      }
+      const path = document.getElementById('curveAnim');
+      if(!path) return;
+      const length = path.getTotalLength();
+      path.style.strokeDasharray = length + ' ' + length;
+      path.style.strokeDashoffset = length;
+      // draw when timeline enters viewport
+      const observer = new IntersectionObserver(entries=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){
+            path.style.transition = 'stroke-dashoffset 1.6s ease-in-out';
+            path.style.strokeDashoffset = '0';
+            observer.disconnect();
+          }
+        });
+      }, {threshold: 0.2});
+      observer.observe(document.querySelector('.timeline-card'));
     })();
 
-    // Modal logic for node screenshots / links
+    // Scroll reveal for timeline items (expand on scroll)
     (function(){
-      const modal = document.getElementById('modal');
-      const modalBackdrop = document.getElementById('modal-backdrop');
-      const modalClose = document.getElementById('modal-close');
-      const modalContent = document.getElementById('modal-content');
+      const items = document.querySelectorAll('.timeline-item');
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            entry.target.classList.add('reveal');
+          }
+        });
+      }, {threshold: 0.18});
+      items.forEach((it)=> io.observe(it));
+    })();
 
-      function openModal(html){
-        modalContent.innerHTML = html;
-        modal.classList.remove('hidden');
-        modal.setAttribute('aria-hidden','false');
-      }
-      function closeModal(){
-        modal.classList.add('hidden');
-        modal.setAttribute('aria-hidden','true');
-      }
-
-      document.querySelectorAll('.btn-node').forEach(btn=>{
-        btn.addEventListener('click', (e)=>{
-          const img = btn.getAttribute('data-img') || btn.closest('.timeline-item').getAttribute('data-img');
-          const link = btn.getAttribute('data-link') || btn.closest('.timeline-item').getAttribute('data-link');
-          if(img){
-            openModal('<img src="'+img+'" alt="screenshot" style="max-width:100%;border-radius:8px;display:block;margin-bottom:12px"><div><a href="'+img+'" target="_blank" rel="noopener">Open image in new tab</a></div>');
-          } else if(link){
-            openModal('<div style="padding:12px"><p>Open external link:</p><p><a href="'+link+'" target="_blank" rel="noopener">'+link+'</a></p></div>');
+    // More button expand/collapse
+    (function(){
+      document.querySelectorAll('.btn-more').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const container = btn.closest('.timeline-item');
+          const more = container.querySelector('.more-content');
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          if(expanded){
+            more.classList.add('hidden');
+            btn.setAttribute('aria-expanded','false');
+            btn.textContent = 'More';
           } else {
-            openModal('<div class="modal-placeholder"><p>No screenshot provided for this item.</p><p class="muted">You can add a screenshot URL to the node\'s <code>data-img</code> attribute or a link to <code>data-link</code>.</p></div>');
+            more.classList.remove('hidden');
+            btn.setAttribute('aria-expanded','true');
+            btn.textContent = 'Less';
+            // smooth scroll to show expanded content
+            setTimeout(()=> {
+              container.scrollIntoView({behavior:'smooth', block:'center'});
+            }, 120);
           }
         });
       });
-
-      modalClose.addEventListener('click', closeModal);
-      modalBackdrop.addEventListener('click', closeModal);
-      document.addEventListener('keydown', (e)=> { if(e.key === 'Escape') closeModal(); });
     })();
   </script>
 </body>
