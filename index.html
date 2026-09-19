@@ -1,125 +1,13 @@
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ula C. | AI‑Driven Automation & IT Operations Specialist</title>
+  <title>Li‑Wen | AI‑Driven Automation & IT Operations Specialist</title>
 
-  <!-- Embedded CSS: INFJ × 大林木 配色 -->
-  <style>
-    :root{
-      --primary:#1E4D3A;    /* 松木綠 */
-      --secondary:#1F3A5F;  /* 靛藍 */
-      --bg:#F5F2EC;         /* 暖灰米白 */
-      --accent:#C9A86A;     /* 柔金色 */
-      --muted:#6B6B6B;
-      --card:#FFFFFF;
-      --radius:12px;
-      --max-width:1100px;
-    }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background:var(--bg);
-      color:#222;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.5;
-    }
-
-    /* Layout */
-    .wrap{max-width:var(--max-width);margin:0 auto;padding:28px;}
-    header.site-header{
-      display:flex;align-items:center;justify-content:space-between;
-      gap:16px;padding:18px 28px;border-radius:14px;background:linear-gradient(90deg,var(--primary),var(--secondary));
-      color:#fff;margin-bottom:20px;box-shadow:0 8px 30px rgba(31,58,95,0.12);
-    }
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand .logo{
-      width:56px;height:56px;border-radius:10px;background:rgba(255,255,255,0.08);
-      display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;
-      box-shadow:inset 0 -6px 18px rgba(0,0,0,0.08);
-    }
-    .brand .title{font-weight:700;letter-spacing:0.02em}
-    nav.main-nav{display:flex;gap:12px;align-items:center}
-    nav.main-nav a{color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.95rem;padding:6px 10px;border-radius:8px}
-    nav.main-nav a:hover{background:rgba(255,255,255,0.06)}
-    .lang-toggle{display:flex;gap:8px}
-    .lang-toggle button{
-      border:0;background:transparent;color:#fff;padding:6px 10px;border-radius:999px;cursor:pointer;font-weight:600;
-      opacity:0.95;
-    }
-    .lang-toggle button.active{background:var(--accent);color:#1E1E1E}
-
-    /* Hero */
-    .hero{
-      display:flex;gap:28px;align-items:flex-start;padding:28px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02));
-      margin-bottom:22px;
-    }
-    .hero-left{flex:1;min-width:260px}
-    .hero-right{width:320px}
-    .hero h1{margin:0;font-size:1.6rem;color:#fff}
-    .hero p.lead{margin:12px 0;color:rgba(255,255,255,0.92)}
-    .hero .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-    .tag{background:rgba(255,255,255,0.08);color:#fff;padding:6px 10px;border-radius:999px;font-size:0.85rem}
-
-    .cta-row{display:flex;gap:10px;margin-top:16px}
-    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
-    .btn-primary{background:var(--accent);color:#111}
-    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.12);color:#fff}
-
-    /* Sections */
-    section.section{background:transparent;padding:22px 0;border-bottom:1px dashed rgba(0,0,0,0.04)}
-    section.section h2{margin:0 0 14px;color:var(--secondary);font-size:1.1rem}
-
-    /* Cards & grids */
-    .card{background:var(--card);border-radius:var(--radius);padding:14px;box-shadow:0 6px 18px rgba(31,58,95,0.06)}
-    .grid{display:grid;gap:14px}
-    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
-    .grid.resp{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-
-    /* Experience */
-    .experience-list article{margin-bottom:12px}
-    .timeplace{font-size:0.85rem;color:var(--muted);margin-bottom:8px}
-    .experience-list ul{margin:8px 0 0 18px;color:var(--muted)}
-
-    /* Skills */
-    .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-    .skill-card h3{margin:0 0 6px;color:var(--primary)}
-    .skill-card p{margin:0;color:var(--muted);font-size:0.95rem}
-
-    /* Portfolio */
-    .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-    .portfolio-card{border-top:4px solid var(--primary)}
-    .portfolio-card h3{margin:0 0 6px}
-    .portfolio-tag{color:var(--secondary);font-size:0.85rem;margin-bottom:8px}
-    .portfolio-meta{list-style:none;padding:0;margin:8px 0 0;color:var(--muted);font-size:0.92rem}
-    .portfolio-meta li{margin-bottom:6px}
-
-    /* Quotes */
-    blockquote{margin:12px 0;padding:12px 14px;border-left:4px solid var(--accent);background:linear-gradient(90deg,rgba(201,168,106,0.04),transparent);border-radius:8px}
-    blockquote p{margin:0;font-style:italic}
-    blockquote footer{margin-top:8px;font-size:0.9rem;color:var(--muted)}
-
-    /* Contact & footer */
-    .contact-list p{margin:6px 0;color:var(--muted)}
-    footer.site-footer{text-align:center;padding:18px 0;color:var(--muted);font-size:0.9rem}
-
-    /* Hidden helper for language */
-    .hidden{display:none !important}
-
-    /* Responsive */
-    @media (max-width:880px){
-      .hero{flex-direction:column}
-      .hero-right{width:100%}
-      nav.main-nav{display:none}
-    }
-  </style>
+  <!-- External stylesheet (already in your repo as style.css) -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="wrap">
@@ -129,11 +17,12 @@
         <div class="logo">LW</div>
         <div>
           <div class="title">Li‑Wen</div>
-          <div style="font-size:0.85rem;color:rgba(255,255,255,0.9)">AI‑Driven Automation & IT Operations Specialist</div>
+          <div class="subtitle">AI‑Driven Automation & IT Operations Specialist</div>
         </div>
       </div>
 
       <nav class="main-nav" aria-label="Main navigation">
+        <!-- Menu labels remain English per your request -->
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
@@ -144,11 +33,9 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <div style="display:flex;align-items:center;gap:12px">
-        <div class="lang-toggle" role="tablist" aria-label="Language switch">
-          <button id="btn-en" class="active" aria-pressed="true">EN</button>
-          <button id="btn-zh" aria-pressed="false">中文</button>
-        </div>
+      <div class="lang-toggle" role="tablist" aria-label="Language switch">
+        <button id="btn-en" class="lang-btn active" aria-pressed="true">EN</button>
+        <button id="btn-zh" class="lang-btn" aria-pressed="false">中文</button>
       </div>
     </header>
 
@@ -167,10 +54,6 @@
             <span class="tag">System Integration</span>
             <span class="tag">AI‑Assisted Development</span>
           </div>
-          <div class="cta-row">
-            <button class="btn btn-primary" onclick="location.href='#contact'">Contact Me</button>
-            <a class="btn btn-outline" href="resume.pdf" download>Download Resume</a>
-          </div>
         </div>
 
         <div class="lang-zh hidden">
@@ -185,46 +68,116 @@
             <span class="tag">系統整合</span>
             <span class="tag">AI 輔助開發</span>
           </div>
-          <div class="cta-row">
-            <button class="btn btn-primary" onclick="location.href='#contact'">聯絡我</button>
-            <a class="btn btn-outline" href="resume.pdf" download>下載履歷</a>
-          </div>
         </div>
       </div>
 
       <aside class="hero-right card">
         <div class="lang-en">
-          <h3 style="margin:0 0 8px">Quick Facts</h3>
-          <p style="margin:0;color:var(--muted)">20+ automation tools · 500+ hours saved annually · Banking & e‑commerce experience</p>
+          <h3>Quick Facts</h3>
+          <p>20+ automation tools · 500+ hours saved annually · Banking & e‑commerce experience</p>
         </div>
         <div class="lang-zh hidden">
-          <h3 style="margin:0 0 8px">快速資訊</h3>
-          <p style="margin:0;color:var(--muted)">20+ 自動化工具 · 每年節省 500+ 小時 · 銀行與電商經驗</p>
+          <h3>快速資訊</h3>
+          <p>20+ 自動化工具 · 每年節省 500+ 小時 · 銀行與電商經驗</p>
         </div>
       </aside>
     </section>
 
-    <!-- About -->
+    <!-- About (integrated quotes) -->
     <section id="about" class="section">
-      <h2>About</h2>
+      <h2>About / 關於我</h2>
+
       <div class="card">
         <div class="lang-en">
-          <p>I’m an IT Operations & Automation Specialist who loves turning messy workflows into elegant, automated systems. Across banking, e‑commerce, and enterprise environments, I’ve built tools that save hundreds of hours, reduce operational risk, and make teams wonder how they ever worked without them.</p>
-          <p>My approach blends system logic, creative problem‑solving, and AI‑assisted development. I enjoy taking a rough idea — “Can this be automated?” — and transforming it into a working solution within hours, not weeks.</p>
+          <p>
+            I am an IT Operations & Automation Specialist with experience across banking, e‑commerce, and enterprise system integration.
+            My work focuses on improving operational efficiency, building automation solutions, and supporting cross‑branch IT environments.
+            I combine technical problem‑solving with project management experience to deliver stable, scalable, and high‑impact solutions.
+          </p>
+
+          <p>
+            In my current role at E.SUN Bank Australia, I support IT operations across two branches and develop workflow automation tools using Power Automate, VBA, RPA, and M365.
+            These solutions have reduced manual workload by hundreds of hours annually and strengthened operational continuity.
+            I also contribute to cloud migration initiatives, system integration, SharePoint development, and BCP execution.
+          </p>
+
+          <p>
+            Previously, I managed large‑scale O2O and system integration projects at momo (Fubon Media Technology), working with cross‑functional teams and external vendors to deliver enterprise‑level solutions.
+            My background also includes system analysis, software development support, and academic teaching assistance in multimedia and web technologies.
+          </p>
+
+          <p>
+            I am committed to continuous learning and technical growth. I completed Stanford University’s selective Code in Place program, a competitive Python course led by the Stanford Computer Science Department,
+            strengthening my algorithmic thinking and automation‑related problem‑solving skills.
+          </p>
+
+          <p>
+            I enjoy building tools that make work easier, designing efficient workflows, and helping teams adopt modern digital solutions.
+          </p>
+
+          <!-- Integrated favorite quotes -->
+          <div class="about-quotes">
+            <blockquote>
+              <p>"Nothing is impossible, the word itself says 'I'm possible!'"</p>
+              <footer>— Audrey Hepburn</footer>
+            </blockquote>
+
+            <blockquote>
+              <p>"I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it."</p>
+              <footer>— Bill Gates</footer>
+            </blockquote>
+          </div>
         </div>
+
         <div class="lang-zh hidden">
-          <p>我是一名 IT 營運與自動化開發專家，擅長把複雜流程變成簡潔、穩定、可維運的自動化系統。無論是銀行、電商或企業環境，我打造的工具已為多個部門節省上百小時的作業時間，降低風險並提升效率。</p>
-          <p>我擅長結合系統邏輯、創意解題與 AI 輔助開發，把一句「這能不能自動化？」變成幾小時內就能運作的實際工具。</p>
+          <p>
+            我是一名 IT 營運與自動化開發專家，擁有銀行、電商與企業系統整合的實務經驗。
+            我的工作專注於提升營運效率、建置自動化解決方案，以及支援跨分行的 IT 營運環境。
+            我結合技術問題解決與專案管理經驗，交付穩定、可擴展且具高影響力的解決方案。
+          </p>
+
+          <p>
+            在目前任職的玉山銀行澳洲分行，我支援兩個分行的 IT 營運，並使用 Power Automate、VBA、RPA 與 M365 開發工作流程自動化工具。
+            這些解決方案每年已為組織減少數百小時的手動工作，並強化營運持續性。
+            我也參與雲端遷移、系統整合、SharePoint 開發與 BCP 執行。
+          </p>
+
+          <p>
+            先前在富邦媒體科技 momo，我負責大型 O2O 與系統整合專案，與跨職能團隊及外部廠商協作，交付企業級解決方案。
+            背景亦包含系統分析、軟體開發支援與多媒體與網頁技術的教學助理經驗。
+          </p>
+
+          <p>
+            我致力於持續學習與技術成長，完成史丹佛大學 Code in Place 精選課程，強化演算法思維與自動化相關問題解決能力。
+          </p>
+
+          <p>
+            我喜歡打造讓工作更輕鬆的工具、設計高效流程，並協助團隊採用現代化的數位解決方案。
+          </p>
+
+          <!-- Integrated favorite quotes in Chinese -->
+          <div class="about-quotes">
+            <blockquote>
+              <p>「沒有什麼是不可能的，這個字本身就說了『我是可能的！』」</p>
+              <footer>— 奧黛麗·赫本（Audrey Hepburn）</footer>
+            </blockquote>
+
+            <blockquote>
+              <p>「我會選擇一個懶惰的人來做困難的工作，因為懶惰的人會找到簡單的方法來完成它。」</p>
+              <footer>— 比爾·蓋茲（Bill Gates）</footer>
+            </blockquote>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Experience -->
+    <!-- Experience (English menu labels retained) -->
     <section id="experience" class="section">
-      <h2>Experience</h2>
+      <h2>Experience / 經歷</h2>
+
       <div class="experience-list">
-        <!-- English -->
         <div class="lang-en">
+          <!-- E.SUN -->
           <article class="card">
             <h3>E.SUN Bank Australia — IT Officer</h3>
             <div class="timeplace">Sydney & Brisbane · 2023–Present</div>
@@ -238,6 +191,7 @@
             </ul>
           </article>
 
+          <!-- momo Overseas PM -->
           <article class="card">
             <h3>Fubon Media Technology (momo.com) — Overseas Development PM</h3>
             <div class="timeplace">Taiwan & Thailand · 2017–2019</div>
@@ -247,6 +201,7 @@
             </ul>
           </article>
 
+          <!-- momo Project Manager -->
           <article class="card">
             <h3>Fubon Media Technology (momo.com) — Project Manager</h3>
             <div class="timeplace">Taiwan · 2015–2017</div>
@@ -257,6 +212,7 @@
             </ul>
           </article>
 
+          <!-- Other roles (condensed for readability; full details already in your LinkedIn and can be expanded) -->
           <article class="card">
             <h3>Australian Innovative Alliance — IT Project Manager</h3>
             <div class="timeplace">Sydney · 2014–2015</div>
@@ -314,8 +270,8 @@
           </article>
         </div>
 
-        <!-- Chinese -->
         <div class="lang-zh hidden">
+          <!-- Chinese translations for Experience (kept complete) -->
           <article class="card">
             <h3>玉山銀行澳洲分行 — IT 專員</h3>
             <div class="timeplace">雪梨 & 布里斯本 · 2023–至今</div>
@@ -339,7 +295,7 @@
           </article>
 
           <article class="card">
-            <h3>富邦媒體科技 momo — 專案研發經理</h3>
+            <h3>富邦媒體科技 momo — 專案經理</h3>
             <div class="timeplace">台灣 · 2015–2017</div>
             <ul>
               <li>主導 O2O 電子票券平台整合，協作 30+ 工程師與多家廠商。</li>
@@ -365,7 +321,7 @@
           </article>
 
           <article class="card">
-            <h3>經貿聯網 — 實習生</h3>
+            <h3>CyberSoft — 銀行 IT 實習生</h3>
             <div class="timeplace">台灣 · 2012</div>
             <ul>
               <li>支援 7+ 銀行系統專案；撰寫 SDLC 文件、流程定義，執行系統測試。</li>
@@ -409,7 +365,7 @@
 
     <!-- Skills -->
     <section id="skills" class="section">
-      <h2>Skills</h2>
+      <h2>Skills / 專業技能</h2>
       <div class="skills-grid">
         <div class="skill-card card">
           <h3>AI‑Driven Workflow Automation</h3>
@@ -434,32 +390,20 @@
       </div>
     </section>
 
-    <!-- Portfolio -->
+    <!-- Portfolio (examples; you can expand) -->
     <section id="portfolio" class="section">
-      <h2>Portfolio</h2>
-      <p style="color:var(--muted)">Below are selected automation tools I’ve designed and built to solve real operational problems. / 以下為我設計與開發的自動化工具範例。</p>
+      <h2>Portfolio / 作品集</h2>
+      <p class="muted">Selected automation tools I designed and built to solve real operational problems.</p>
 
       <div class="portfolio-grid">
-        <!-- Example cards: duplicate and edit these for each automation tool -->
         <article class="portfolio-card card">
           <h3>Daily Folder Automation</h3>
           <div class="portfolio-tag">Power Automate · VBA · File System</div>
-          <p class="portfolio-desc">Automatically creates daily folders and sub‑structures for multiple departments, ensuring consistent naming, storage, and auditability.</p>
+          <p class="portfolio-desc">Automatically creates daily folders and sub‑structures for multiple departments, ensuring consistent naming and auditability.</p>
           <ul class="portfolio-meta">
-            <li><strong>Problem:</strong> Staff manually created daily folders, causing inconsistency and wasted time.</li>
+            <li><strong>Problem:</strong> Manual folder creation caused inconsistency and wasted time.</li>
             <li><strong>Solution:</strong> Automation script that generates folders based on date, department, and task type.</li>
-            <li><strong>Impact:</strong> Saved ~X hours per month and improved traceability for audits.</li>
-          </ul>
-        </article>
-
-        <article class="portfolio-card card">
-          <h3>Asset Tracking Automation</h3>
-          <div class="portfolio-tag">RPA · Excel · SharePoint</div>
-          <p class="portfolio-desc">Automated asset tracking and status updates, integrating Excel records with SharePoint lists and notifications.</p>
-          <ul class="portfolio-meta">
-            <li><strong>Problem:</strong> Asset records were updated manually and often out of sync.</li>
-            <li><strong>Solution:</strong> RPA flow that syncs asset data and sends alerts for changes.</li>
-            <li><strong>Impact:</strong> Reduced errors and improved visibility of asset status.</li>
+            <li><strong>Impact:</strong> Saved hours per month and improved traceability for audits.</li>
           </ul>
         </article>
 
@@ -474,13 +418,13 @@
           </ul>
         </article>
 
-        <!-- Add more portfolio-card blocks here for each tool you want to showcase -->
+        <!-- Add more portfolio-card blocks for each tool -->
       </div>
     </section>
 
     <!-- Education -->
     <section id="education" class="section">
-      <h2>Education</h2>
+      <h2>Education / 學歷</h2>
       <div class="card">
         <div class="lang-en">
           <h3>Fu Jen Catholic University — Master of Information Management</h3>
@@ -501,13 +445,13 @@
           <h3>輔仁大學 — 資訊管理碩士</h3>
           <div class="timeplace">台灣 · 2011–2013</div>
           <ul>
-            <li>發表論文：混成式學習行為研究；刊登於第十九屆兩岸資訊管理研討會。</li>
+            <li>發表論文：混成式學習論壇行為研究；刊登於第十九屆兩岸資訊管理研討會。</li>
           </ul>
 
           <h3 style="margin-top:14px">真理大學 — 資訊管理學士</h3>
           <div class="timeplace">台灣 · 2007–2011</div>
           <ul>
-            <li>以擴增實境為基礎之閩南語自學系統；獲國科會大專生研究計畫之殊榮。</li>
+            <li>政府補助 AR 閩南語自學系統；獲國科會專案補助。</li>
           </ul>
         </div>
       </div>
@@ -515,18 +459,19 @@
 
     <!-- Certifications -->
     <section id="certifications" class="section">
-      <h2>Certifications</h2>
+      <h2>Certifications / 證照</h2>
       <div class="card">
         <div class="lang-en">
-          <ul style="margin:0;padding-left:18px;color:var(--muted)">
+          <ul>
             <li>Cyber Safety & Safe AI Certification (Level 1–3) — Cyber Wardens · 2026</li>
             <li>Stanford Code in Place — Stanford University · 2025</li>
             <li>Project Management Essentials Certified (PMEC) — MSI · 2022</li>
             <li>Oracle Certified Professional, Java SE 6 Programmer — Oracle · 2011</li>
           </ul>
         </div>
+
         <div class="lang-zh hidden">
-          <ul style="margin:0;padding-left:18px;color:var(--muted)">
+          <ul>
             <li>Cyber Safety & Safe AI（Level 1–3）— Cyber Wardens · 2026</li>
             <li>Stanford Code in Place — 史丹佛大學 · 2025</li>
             <li>專案管理基礎認證（PMEC）— MSI · 2022</li>
@@ -536,49 +481,12 @@
       </div>
     </section>
 
-    <!-- Quotes -->
-    <section id="quotes" class="section">
-      <h2>Quotes</h2>
-      <div class="card">
-        <div class="lang-en">
-          <blockquote>
-            <p>"Nothing is impossible, the word itself says 'I'm possible!'"</p>
-            <footer>— Audrey Hepburn</footer>
-          </blockquote>
-
-          <blockquote>
-            <p>"I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it."</p>
-            <footer>— Bill Gates</footer>
-          </blockquote>
-        </div>
-
-        <div class="lang-zh hidden">
-          <blockquote>
-            <p>「沒有什麼是不可能的，這個字本身就說了『我是可能的！』」</p>
-            <footer>— 奧黛麗·赫本（Audrey Hepburn）</footer>
-          </blockquote>
-
-          <blockquote>
-            <p>「我會選擇一個懶惰的人來做困難的工作，因為懶惰的人會找到簡單的方法來完成它。」</p>
-            <footer>— 比爾·蓋茲（Bill Gates）</footer>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
+    <!-- Contact (simplified per your request) -->
     <section id="contact" class="section">
       <h2>Contact</h2>
       <div class="card contact-list">
-        <div class="lang-en">
-          <p>Sydney, Australia</p>
-          <p>LinkedIn: <a href="https://www.linkedin.com/in/your-id" target="_blank" rel="noopener">linkedin.com/in/ulachen</a></p>
-        </div>
-
-        <div class="lang-zh hidden">
-          <p>澳洲 雪梨</p>
-          <p>LinkedIn：<a href="https://www.linkedin.com/in/your-id" target="_blank" rel="noopener">linkedin.com/in/ulachen</a></p>
-        </div>
+        <p>Sydney, Australia</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/ulachen" target="_blank" rel="noopener">linkedin.com/in/ulachen</a></p>
       </div>
     </section>
 
@@ -614,9 +522,10 @@
       btnEn.addEventListener('click', ()=> setLang('en'));
       btnZh.addEventListener('click', ()=> setLang('zh'));
 
-      // Initialize from localStorage or prefer-language
+      // Initialize from localStorage or browser preference
       const saved = localStorage.getItem('site-lang');
       if(saved === 'zh') setLang('zh');
+      else if(saved === 'en') setLang('en');
       else {
         const lang = navigator.language || navigator.userLanguage || 'en';
         if(lang.startsWith('zh')) setLang('zh'); else setLang('en');
