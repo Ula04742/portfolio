@@ -6,8 +6,8 @@
   --muted:#6B6B6B;
   --card:#FFFFFF;
   --radius:12px;
-  --max-width:1100px;
-  --shadow: 0 12px 36px rgba(31,58,95,0.10);
+  --max-width:1200px;
+  --shadow: 0 14px 40px rgba(31,58,95,0.10);
   --mono: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
 }
 
@@ -24,9 +24,9 @@ body{
 }
 
 /* Container */
-.wrap{max-width:var(--max-width);margin:28px auto;padding:20px}
+.wrap{max-width:var(--max-width);margin:28px auto;padding:24px}
 
-/* Header compact */
+/* Header compact & balanced */
 .site-header{
   display:flex;align-items:center;justify-content:space-between;gap:20px;
   padding:12px 20px;border-radius:12px;background:linear-gradient(90deg,var(--primary),var(--secondary));
@@ -34,11 +34,11 @@ body{
 }
 .brand{display:flex;align-items:center;gap:12px;min-width:0}
 .logo{
-  width:44px;height:44px;border-radius:50%;background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(0,0,0,0.06));
-  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:#fff;flex:0 0 44px;box-shadow:0 6px 18px rgba(0,0,0,0.12);
+  width:48px;height:48px;border-radius:50%;background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(0,0,0,0.06));
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:#fff;flex:0 0 48px;box-shadow:0 6px 18px rgba(0,0,0,0.12);
 }
 .brand-text{min-width:0}
-.title{font-weight:800;font-size:0.98rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.title{font-weight:800;font-size:1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .subtitle{font-size:0.78rem;color:rgba(255,255,255,0.9);opacity:0.95;white-space:nowrap}
 
 /* Nav */
@@ -52,49 +52,54 @@ nav.main-nav a:hover{background:rgba(255,255,255,0.06)}
 .lang-btn{border:0;background:transparent;color:#fff;padding:6px 10px;border-radius:999px;cursor:pointer;font-weight:700;opacity:0.95}
 .lang-btn.active{background:var(--accent);color:#111}
 
-/* LinkedIn-like hero */
-.linkedIn-style{display:flex;gap:20px;align-items:flex-start;padding:18px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfbfb);margin:18px 0;box-shadow:0 8px 22px rgba(31,58,95,0.04)}
-.li-left{flex:0 0 360px;padding:12px}
-.li-right{flex:1;padding:12px}
-.li-name{font-size:1.25rem;font-weight:800;color:var(--primary)}
-.li-role{margin-top:6px;color:var(--muted);font-weight:600}
+/* LinkedIn-like hero (wider, fixed left column) */
+.linkedIn-style{
+  display:flex;gap:24px;align-items:flex-start;padding:20px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfbfb);
+  margin:20px 0;box-shadow:0 10px 30px rgba(31,58,95,0.05);
+}
+.li-left{flex:0 0 420px;padding:14px;border-right:1px solid rgba(0,0,0,0.04)}
+.li-right{flex:1;padding:14px}
+.li-name{font-size:1.35rem;font-weight:900;color:var(--primary)}
+.li-role{margin-top:6px;color:var(--muted);font-weight:700}
 .li-location{margin-top:8px;color:var(--muted)}
 .li-contact{margin-top:10px;color:var(--muted)}
 .li-contact a{color:var(--primary);text-decoration:none;font-weight:700}
 .li-summary{margin:0;color:var(--muted)}
 
 /* Sections */
-.section{padding:22px 0;border-bottom:1px solid rgba(0,0,0,0.03)}
-.section h2{margin:0 0 14px;color:var(--secondary);font-size:1.05rem}
+.section{padding:28px 0;border-bottom:1px solid rgba(0,0,0,0.03)}
+.section h2{margin:0 0 18px;color:var(--secondary);font-size:1.08rem}
 
 /* Card */
-.card{background:var(--card);border-radius:var(--radius);padding:16px;box-shadow:0 8px 22px rgba(31,58,95,0.04)}
+.card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 10px 30px rgba(31,58,95,0.04)}
 
-/* About quotes */
-.about-quotes{display:grid;gap:10px;margin-top:12px}
+/* About quotes (always English) */
+.about-quotes.always-en{margin-top:14px}
 blockquote{margin:0;padding:12px 14px;border-left:4px solid var(--accent);background:linear-gradient(90deg,rgba(201,168,106,0.04),transparent);border-radius:8px}
 blockquote p{margin:0;font-style:italic}
 blockquote footer{margin-top:8px;font-size:0.9rem;color:var(--muted)}
 
 /* Timeline container */
 .timeline-card{position:relative;overflow:visible;padding:18px}
-.timeline-svg{position:absolute;left:0;right:0;top:0;width:100%;height:300px;pointer-events:none;opacity:0.95}
-.timeline-items{position:relative;padding-top:40px;display:flex;flex-direction:column;gap:22px}
+.timeline-svg{position:absolute;left:0;right:0;top:0;width:100%;height:360px;pointer-events:none;opacity:0.95}
+.timeline-items{position:relative;padding-top:48px;display:flex;flex-direction:column;gap:26px}
 
 /* Timeline item */
 .timeline-item{
-  display:flex;gap:18px;align-items:flex-start;position:relative;padding:14px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfbfb);
-  box-shadow:0 6px 18px rgba(31,58,95,0.04);transition:transform .28s ease,box-shadow .28s ease,opacity .4s ease;
+  display:flex;gap:18px;align-items:flex-start;position:relative;padding:16px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfbfb);
+  box-shadow:0 8px 22px rgba(31,58,95,0.04);transition:transform .36s cubic-bezier(.2,.9,.2,1),box-shadow .36s ease,opacity .4s ease;
   opacity:0; transform:translateY(18px);
 }
 .timeline-item.reveal{opacity:1;transform:translateY(0)}
-.timeline-item.alt{margin-left:48px}
+.timeline-item.alt{margin-left:64px}
 .node{
-  width:18px;height:18px;border-radius:50%;background:linear-gradient(180deg,var(--accent),#e0c47a);border:4px solid var(--primary);
-  box-shadow:0 6px 18px rgba(201,168,106,0.18);flex:0 0 18px;margin-top:6px;position:relative;
+  width:20px;height:20px;border-radius:50%;background:linear-gradient(180deg,var(--accent),#e0c47a);border:4px solid var(--primary);
+  box-shadow:0 8px 26px rgba(201,168,106,0.18);flex:0 0 20px;margin-top:6px;position:relative;
+  transition:transform .28s ease;
 }
+.timeline-item:hover .node{transform:scale(1.06)}
 .content{flex:1}
-.content h3{margin:0 0 6px;font-size:1.05rem;color:var(--primary)}
+.content h3{margin:0 0 6px;font-size:1.06rem;color:var(--primary)}
 .content .timeplace{font-size:0.9rem;color:var(--muted);margin-bottom:8px}
 .content .summary{margin:0 0 8px;color:var(--muted)}
 .more-content{margin-top:8px}
@@ -102,14 +107,21 @@ blockquote footer{margin-top:8px;font-size:0.9rem;color:var(--muted)}
 .item-actions{margin-top:8px}
 .btn-more{background:transparent;border:1px solid var(--primary);color:var(--primary);padding:6px 10px;border-radius:8px;cursor:pointer}
 
-/* Skills & portfolio */
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-.skill-card h3{margin:0 0 6px;color:var(--primary)}
-.skill-card p{margin:0;color:var(--muted);font-size:0.95rem}
+/* Skills: three pillars with personality */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.skill-card{padding:16px;border-radius:12px;background:linear-gradient(180deg,#fff,#fcfcfc);box-shadow:0 8px 22px rgba(31,58,95,0.04)}
+.skill-card h3{margin:0 0 8px;color:var(--primary)}
+.skill-card p{margin:0;color:var(--muted)}
+
+/* Portfolio */
 .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
 .portfolio-card{border-top:4px solid var(--primary);padding:14px}
 .portfolio-tag{color:var(--secondary);font-size:0.85rem;margin-bottom:8px}
 .portfolio-meta{list-style:none;padding:0;margin:8px 0 0;color:var(--muted);font-size:0.92rem}
+
+/* Education */
+.timeplace{font-size:0.9rem;color:var(--muted);margin-bottom:8px}
+.muted{color:var(--muted);font-size:0.95rem}
 
 /* Contact */
 .contact-list p{margin:6px 0;color:var(--muted)}
@@ -120,16 +132,20 @@ blockquote footer{margin-top:8px;font-size:0.9rem;color:var(--muted)}
 
 /* Helpers */
 .hidden{display:none !important}
-.muted{color:var(--muted);font-size:0.9rem}
 
 /* Responsive */
-@media (max-width:980px){
-  .wrap{padding:12px}
+@media (max-width:1100px){
+  .wrap{padding:16px}
+  .li-left{flex:0 0 360px}
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:880px){
   nav.main-nav{display:none}
   .linkedIn-style{flex-direction:column}
-  .li-left{width:100%;padding:8px}
-  .li-right{width:100%;padding:8px}
-  .timeline-svg{height:220px}
-  .timeline-item{flex-direction:column;gap:10px}
+  .li-left{width:100%;border-right:none;border-bottom:1px solid rgba(0,0,0,0.04);padding-bottom:12px}
+  .li-right{width:100%}
+  .timeline-svg{height:260px}
+  .timeline-item{flex-direction:column;gap:12px}
   .timeline-item.alt{margin-left:0}
+  .skills-grid{grid-template-columns:1fr}
 }
