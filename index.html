@@ -1,94 +1,409 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ula | AI-Driven Automation & IT Operations Specialist</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ula C. | AI‑Driven Automation & IT Operations Specialist</title>
+
+  <!-- Embedded CSS: INFJ × 大林木 配色 -->
+  <style>
+    :root{
+      --primary:#1E4D3A;    /* 松木綠 */
+      --secondary:#1F3A5F;  /* 靛藍 */
+      --bg:#F5F2EC;         /* 暖灰米白 */
+      --accent:#C9A86A;     /* 柔金色 */
+      --muted:#6B6B6B;
+      --card:#FFFFFF;
+      --radius:12px;
+      --max-width:1100px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background:var(--bg);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    /* Layout */
+    .wrap{max-width:var(--max-width);margin:0 auto;padding:28px;}
+    header.site-header{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:16px;padding:18px 28px;border-radius:14px;background:linear-gradient(90deg,var(--primary),var(--secondary));
+      color:#fff;margin-bottom:20px;box-shadow:0 8px 30px rgba(31,58,95,0.12);
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .logo{
+      width:56px;height:56px;border-radius:10px;background:rgba(255,255,255,0.08);
+      display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;
+      box-shadow:inset 0 -6px 18px rgba(0,0,0,0.08);
+    }
+    .brand .title{font-weight:700;letter-spacing:0.02em}
+    nav.main-nav{display:flex;gap:12px;align-items:center}
+    nav.main-nav a{color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.95rem;padding:6px 10px;border-radius:8px}
+    nav.main-nav a:hover{background:rgba(255,255,255,0.06)}
+    .lang-toggle{display:flex;gap:8px}
+    .lang-toggle button{
+      border:0;background:transparent;color:#fff;padding:6px 10px;border-radius:999px;cursor:pointer;font-weight:600;
+      opacity:0.95;
+    }
+    .lang-toggle button.active{background:var(--accent);color:#1E1E1E}
+
+    /* Hero */
+    .hero{
+      display:flex;gap:28px;align-items:flex-start;padding:28px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02));
+      margin-bottom:22px;
+    }
+    .hero-left{flex:1;min-width:260px}
+    .hero-right{width:320px}
+    .hero h1{margin:0;font-size:1.6rem;color:#fff}
+    .hero p.lead{margin:12px 0;color:rgba(255,255,255,0.92)}
+    .hero .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .tag{background:rgba(255,255,255,0.08);color:#fff;padding:6px 10px;border-radius:999px;font-size:0.85rem}
+
+    .cta-row{display:flex;gap:10px;margin-top:16px}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn-primary{background:var(--accent);color:#111}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.12);color:#fff}
+
+    /* Sections */
+    section.section{background:transparent;padding:22px 0;border-bottom:1px dashed rgba(0,0,0,0.04)}
+    section.section h2{margin:0 0 14px;color:var(--secondary);font-size:1.1rem}
+
+    /* Cards & grids */
+    .card{background:var(--card);border-radius:var(--radius);padding:14px;box-shadow:0 6px 18px rgba(31,58,95,0.06)}
+    .grid{display:grid;gap:14px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    .grid.resp{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+
+    /* Experience */
+    .experience-list article{margin-bottom:12px}
+    .timeplace{font-size:0.85rem;color:var(--muted);margin-bottom:8px}
+    .experience-list ul{margin:8px 0 0 18px;color:var(--muted)}
+
+    /* Skills */
+    .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+    .skill-card h3{margin:0 0 6px;color:var(--primary)}
+    .skill-card p{margin:0;color:var(--muted);font-size:0.95rem}
+
+    /* Portfolio */
+    .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+    .portfolio-card{border-top:4px solid var(--primary)}
+    .portfolio-card h3{margin:0 0 6px}
+    .portfolio-tag{color:var(--secondary);font-size:0.85rem;margin-bottom:8px}
+    .portfolio-meta{list-style:none;padding:0;margin:8px 0 0;color:var(--muted);font-size:0.92rem}
+    .portfolio-meta li{margin-bottom:6px}
+
+    /* Quotes */
+    blockquote{margin:12px 0;padding:12px 14px;border-left:4px solid var(--accent);background:linear-gradient(90deg,rgba(201,168,106,0.04),transparent);border-radius:8px}
+    blockquote p{margin:0;font-style:italic}
+    blockquote footer{margin-top:8px;font-size:0.9rem;color:var(--muted)}
+
+    /* Contact & footer */
+    .contact-list p{margin:6px 0;color:var(--muted)}
+    footer.site-footer{text-align:center;padding:18px 0;color:var(--muted);font-size:0.9rem}
+
+    /* Hidden helper for language */
+    .hidden{display:none !important}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .hero{flex-direction:column}
+      .hero-right{width:100%}
+      nav.main-nav{display:none}
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="logo">Li‑Wen</div>
-    <nav class="nav">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="lang-toggle">
-      <button id="btn-en" class="active">EN</button>
-      <button id="btn-zh">中文</button>
-    </div>
-  </header>
+  <div class="wrap">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">LW</div>
+        <div>
+          <div class="title">Li‑Wen</div>
+          <div style="font-size:0.85rem;color:rgba(255,255,255,0.9)">AI‑Driven Automation & IT Operations Specialist</div>
+        </div>
+      </div>
 
-  <main>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:12px">
+        <div class="lang-toggle" role="tablist" aria-label="Language switch">
+          <button id="btn-en" class="active" aria-pressed="true">EN</button>
+          <button id="btn-zh" aria-pressed="false">中文</button>
+        </div>
+      </div>
+    </header>
+
     <!-- Hero -->
-    <section id="home" class="section hero">
-      <div class="hero-content lang-en">
-        <h1>AI-Driven Automation & IT Operations Specialist</h1>
-        <p>Transforming ideas into automation. Building systems that make work faster, smarter, and beautifully simple.</p>
-        <p class="location">Based in Sydney, Australia</p>
-        <p class="tags">Power Automate · VBA · RPA · M365 · System Integration · AI-Assisted Development</p>
+    <section id="home" class="hero">
+      <div class="hero-left">
+        <div class="lang-en">
+          <h1>Transforming ideas into automation</h1>
+          <p class="lead">Building systems that make work faster, smarter, and beautifully simple.</p>
+          <p class="timeplace">Based in Sydney, Australia</p>
+          <div class="tags">
+            <span class="tag">Power Automate</span>
+            <span class="tag">VBA</span>
+            <span class="tag">RPA</span>
+            <span class="tag">M365</span>
+            <span class="tag">System Integration</span>
+            <span class="tag">AI‑Assisted Development</span>
+          </div>
+          <div class="cta-row">
+            <button class="btn btn-primary" onclick="location.href='#contact'">Contact Me</button>
+            <a class="btn btn-outline" href="resume.pdf" download>Download Resume</a>
+          </div>
+        </div>
+
+        <div class="lang-zh hidden">
+          <h1>把想法變成自動化</h1>
+          <p class="lead">打造更快、更穩、更聰明的工作系統。</p>
+          <p class="timeplace">現居澳洲雪梨</p>
+          <div class="tags">
+            <span class="tag">Power Automate</span>
+            <span class="tag">VBA</span>
+            <span class="tag">RPA</span>
+            <span class="tag">M365</span>
+            <span class="tag">系統整合</span>
+            <span class="tag">AI 輔助開發</span>
+          </div>
+          <div class="cta-row">
+            <button class="btn btn-primary" onclick="location.href='#contact'">聯絡我</button>
+            <a class="btn btn-outline" href="resume.pdf" download>下載履歷</a>
+          </div>
+        </div>
       </div>
-      <div class="hero-content lang-zh hidden">
-        <h1>AI 自動化開發與 IT 營運專家</h1>
-        <p>把想法變成自動化，打造更快、更穩、更聰明的工作系統。</p>
-        <p class="location">現居澳洲雪梨</p>
-        <p class="tags">Power Automate · VBA · RPA · M365 · 系統整合 · AI 輔助開發</p>
-      </div>
+
+      <aside class="hero-right card">
+        <div class="lang-en">
+          <h3 style="margin:0 0 8px">Quick Facts</h3>
+          <p style="margin:0;color:var(--muted)">20+ automation tools · 500+ hours saved annually · Banking & e‑commerce experience</p>
+        </div>
+        <div class="lang-zh hidden">
+          <h3 style="margin:0 0 8px">快速資訊</h3>
+          <p style="margin:0;color:var(--muted)">20+ 自動化工具 · 每年節省 500+ 小時 · 銀行與電商經驗</p>
+        </div>
+      </aside>
     </section>
 
     <!-- About -->
     <section id="about" class="section">
       <h2>About</h2>
-      <div class="lang-en">
-        <p>
-          I’m an IT Operations & Automation Specialist who loves turning messy workflows into elegant, automated systems.
-          Across banking, e‑commerce, and enterprise environments, I’ve built tools that save hundreds of hours, reduce
-          operational risk, and make teams wonder how they ever worked without them.
-        </p>
-        <p>
-          My approach blends system logic, creative problem‑solving, and AI‑assisted development. I enjoy taking a rough idea —
-          “Can this be automated?” — and transforming it into a working solution within hours, not weeks.
-        </p>
-      </div>
-      <div class="lang-zh hidden">
-        <p>
-          我是一名 IT 營運與自動化開發專家，擅長把複雜流程變成簡潔、穩定、可維運的自動化系統。無論是銀行、
-          電商或企業環境，我打造的工具已為多個部門節省上百小時的作業時間，降低風險並提升效率。
-        </p>
-        <p>
-          我擅長結合系統邏輯、創意解題與 AI 輔助開發，把一句「這能不能自動化？」變成幾小時內就能運作的實際工具。
-        </p>
+      <div class="card">
+        <div class="lang-en">
+          <p>I’m an IT Operations & Automation Specialist who loves turning messy workflows into elegant, automated systems. Across banking, e‑commerce, and enterprise environments, I’ve built tools that save hundreds of hours, reduce operational risk, and make teams wonder how they ever worked without them.</p>
+          <p>My approach blends system logic, creative problem‑solving, and AI‑assisted development. I enjoy taking a rough idea — “Can this be automated?” — and transforming it into a working solution within hours, not weeks.</p>
+        </div>
+        <div class="lang-zh hidden">
+          <p>我是一名 IT 營運與自動化開發專家，擅長把複雜流程變成簡潔、穩定、可維運的自動化系統。無論是銀行、電商或企業環境，我打造的工具已為多個部門節省上百小時的作業時間，降低風險並提升效率。</p>
+          <p>我擅長結合系統邏輯、創意解題與 AI 輔助開發，把一句「這能不能自動化？」變成幾小時內就能運作的實際工具。</p>
+        </div>
       </div>
     </section>
 
-    <!-- Experience (簡版，之後你可以補充細節) -->
+    <!-- Experience -->
     <section id="experience" class="section">
       <h2>Experience</h2>
       <div class="experience-list">
-        <article>
-          <h3>E.SUN Bank Australia — IT Officer</h3>
-          <p class="timeplace">Sydney & Brisbane · 2023–Present</p>
-          <ul>
-            <li>Developed 20+ automation tools, reducing 500+ hours annually across departments.</li>
-            <li>Designed automation agents for reporting, access workflows, and daily operations.</li>
-            <li>Supported cloud migration and core banking system upgrades.</li>
-            <li>Built SharePoint-based branch portal for internal communication.</li>
-          </ul>
-        </article>
+        <!-- English -->
+        <div class="lang-en">
+          <article class="card">
+            <h3>E.SUN Bank Australia — IT Officer</h3>
+            <div class="timeplace">Sydney & Brisbane · 2023–Present</div>
+            <ul>
+              <li>Developed 20+ automation tools (Power Automate, VBA, RPA, .bat), reducing 500+ hours annually.</li>
+              <li>Built automation for daily folders, timetables, asset tracking, patch progress, audits, loan margin models, shutdown detection, laptop borrowing, email downloads, weekly IT reports.</li>
+              <li>Introduced M365 Copilot and delivered staff training; created automation agents for report downloads and system access workflows.</li>
+              <li>Supported cloud migration (IaaS, PaaS, SaaS) and core banking system upgrades.</li>
+              <li>Built the SharePoint-based branch portal for internal communication and documentation.</li>
+              <li>Activated BCP independently during a building shutdown (Dec 2023), restoring operations within 1–2 hours.</li>
+            </ul>
+          </article>
 
-        <article>
-          <h3>Fubon Media Technology (momo.com) — PM / Project Manager</h3>
-          <p class="timeplace">Taiwan & Thailand · 2015–2019</p>
-          <ul>
-            <li>Led O2O ticketing platform integration with 30+ engineers and multiple vendors.</li>
-            <li>Supported Thailand e-commerce platform adopting momo’s system architecture.</li>
-            <li>Authored R&D tax credit reports saving at least NT$3M annually.</li>
-          </ul>
-        </article>
-        <!-- 其他經歷你可以照這個格式往下加 -->
+          <article class="card">
+            <h3>Fubon Media Technology (momo.com) — Overseas Development PM</h3>
+            <div class="timeplace">Taiwan & Thailand · 2017–2019</div>
+            <ul>
+              <li>Supported Thailand’s e-commerce platform in adopting momo’s system architecture; delivered technical training and workflow alignment.</li>
+              <li>Coordinated cross-border communication and collaborated with engineering teams to improve platform stability and efficiency.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Fubon Media Technology (momo.com) — Project Manager</h3>
+            <div class="timeplace">Taiwan · 2015–2017</div>
+            <ul>
+              <li>Led O2O Electronic Ticketing Platform integration across website, app, order, marketing, payment, logistics, SCM, ECM; managed 30+ engineers and vendors.</li>
+              <li>Authored R&D Investment Tax Credit Reports for 4 consecutive years, saving NT$3M annually.</li>
+              <li>Produced monthly sales & traffic analysis reports and introduced SEO improvements.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Australian Innovative Alliance — IT Project Manager</h3>
+            <div class="timeplace">Sydney · 2014–2015</div>
+            <ul>
+              <li>Developed client websites using Joomla and WordPress; provided training and project delivery management.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Interinfo Software — Assistant Analyst</h3>
+            <div class="timeplace">Taiwan · 2013–2014</div>
+            <ul>
+              <li>Authored system specifications for WBS system; designed UI/UX and executed testing; developed user manuals.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>CyberSoft Digital Services — Banking IT Intern</h3>
+            <div class="timeplace">Taiwan · 2012</div>
+            <ul>
+              <li>Supported banking system projects across 7+ banks; performed SDLC documentation, workflow definitions, UI/UX modifications, and system testing.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Fu Jen Catholic University — Teaching Assistant</h3>
+            <div class="timeplace">Taiwan · 2011–2013</div>
+            <ul>
+              <li>Multimedia TA; taught MOS certification courses; developed and maintained university web systems.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>National Open University — Teaching Assistant</h3>
+            <div class="timeplace">Taiwan · 2011–2013</div>
+            <ul>
+              <li>Assisted multimedia and web-related courses; provided hands-on guidance in web design and multimedia tools.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>National Science and Technology Council — Research Assistant</h3>
+            <div class="timeplace">Taiwan · 2009–2011</div>
+            <ul>
+              <li>Conducted research, system development, and documentation; received NSC funding and recognition.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Campus E-Service Volunteer Team — Volunteer Instructor</h3>
+            <div class="timeplace">Taiwan · 2010–2011</div>
+            <ul>
+              <li>Provided basic computer literacy training to rural schools; supported Ministry of Education digital inclusion initiatives.</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Chinese -->
+        <div class="lang-zh hidden">
+          <article class="card">
+            <h3>玉山銀行澳洲分行 — IT 專員</h3>
+            <div class="timeplace">雪梨 & 布里斯本 · 2023–至今</div>
+            <ul>
+              <li>開發 20+ 自動化工具（Power Automate、VBA、RPA、.bat），每年節省 500+ 小時。</li>
+              <li>建立每日資料夾、時程表、資產追蹤、Patch 進度、稽核、保證金模型、關機偵測、筆電借用、Email 下載、IT 週報等自動化。</li>
+              <li>導入 M365 Copilot 並提供員工訓練；建立報表下載與系統存取自動化代理。</li>
+              <li>支援雲端遷移（IaaS、PaaS、SaaS）與核心銀行系統升級。</li>
+              <li>建立 SharePoint 分行內部門戶。</li>
+              <li>2023 年大樓停電時獨立啟動 BCP，1–2 小時內恢復營運。</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>富邦媒體科技 momo — 海外發展 PM</h3>
+            <div class="timeplace">台灣 & 泰國 · 2017–2019</div>
+            <ul>
+              <li>協助泰國電商平台導入 momo 系統架構，提供技術訓練與流程對齊。</li>
+              <li>跨國協調工程團隊，提升平台穩定度與效率。</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>富邦媒體科技 momo — 專案研發經理</h3>
+            <div class="timeplace">台灣 · 2015–2017</div>
+            <ul>
+              <li>主導 O2O 電子票券平台整合，協作 30+ 工程師與多家廠商。</li>
+              <li>撰寫研發投資抵減報告，連續 4 年為公司節省至少 NT$3M。</li>
+              <li>製作月銷售與流量分析報告，導入 SEO 改善。</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Australian Innovative Alliance — IT 專案經理</h3>
+            <div class="timeplace">雪梨 · 2014–2015</div>
+            <ul>
+              <li>使用 Joomla、WordPress 開發客戶網站，並提供維護訓練與專案交付管理。</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>英特內軟體 — 助理分析師</h3>
+            <div class="timeplace">台灣 · 2013–2014</div>
+            <ul>
+              <li>撰寫 WBS 系統規格書；設計 UI/UX 並執行測試；撰寫使用手冊。</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>經貿聯網 — 實習生</h3>
+            <div class="timeplace">台灣 · 2012</div>
+            <ul>
+              <li>支援 7+ 銀行系統專案；撰寫 SDLC 文件、流程定義，執行系統測試。</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>輔仁大學 — 教學助理</h3>
+            <div class="timeplace">台灣 · 2011–2013</div>
+            <ul>
+              <li>協助多媒體課程；教授 MOS 認證課程；開發與維護校內網站。</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>國立空大 — 教學助理</h3>
+            <div class="timeplace">台灣 · 2011–2013</div>
+            <ul>
+              <li>協助多媒體與網頁課程，提供軟體操作與專題指導。</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>國科會 — 研究助理</h3>
+            <div class="timeplace">台灣 · 2009–2011</div>
+            <ul>
+              <li>執行研究、系統開發與文件撰寫；獲國科會補助與認可。</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>教育部校園志工隊 — 志工講師</h3>
+            <div class="timeplace">台灣 · 2010–2011</div>
+            <ul>
+              <li>教授偏鄉學童電腦基礎能力，推動數位落差計畫。</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -96,23 +411,23 @@
     <section id="skills" class="section">
       <h2>Skills</h2>
       <div class="skills-grid">
-        <div class="skill-card">
+        <div class="skill-card card">
           <h3>AI‑Driven Workflow Automation</h3>
           <p>Design automation using Power Automate, VBA, RPA, Python, and M365 Copilot.</p>
         </div>
-        <div class="skill-card">
+        <div class="skill-card card">
           <h3>AI‑Assisted Development</h3>
           <p>Use AI to brainstorm, debug, extend, and accelerate automation builds.</p>
         </div>
-        <div class="skill-card">
+        <div class="skill-card card">
           <h3>System Integration</h3>
           <p>Connect banking systems, e‑commerce platforms, and enterprise tools.</p>
         </div>
-        <div class="skill-card">
+        <div class="skill-card card">
           <h3>Workflow Optimization</h3>
           <p>Redesign processes to reduce workload and improve efficiency.</p>
         </div>
-        <div class="skill-card">
+        <div class="skill-card card">
           <h3>IT Operations & Project Management</h3>
           <p>Support system stability, cloud migration, and cross‑team delivery.</p>
         </div>
@@ -122,19 +437,14 @@
     <!-- Portfolio -->
     <section id="portfolio" class="section">
       <h2>Portfolio</h2>
-      <p class="portfolio-intro">
-        Below are selected automation tools I’ve designed and built to solve real operational problems.
-      </p>
+      <p style="color:var(--muted)">Below are selected automation tools I’ve designed and built to solve real operational problems. / 以下為我設計與開發的自動化工具範例。</p>
 
       <div class="portfolio-grid">
-        <!-- 範例作品卡片：你可以複製這個結構，為每一個自動化工具建立一張卡片 -->
-        <article class="portfolio-card">
+        <!-- Example cards: duplicate and edit these for each automation tool -->
+        <article class="portfolio-card card">
           <h3>Daily Folder Automation</h3>
-          <p class="portfolio-tag">Power Automate · VBA · File System</p>
-          <p class="portfolio-desc">
-            Automatically creates daily folders and sub‑structures for multiple departments, ensuring consistent naming,
-            storage, and auditability. Reduced manual setup time and improved data organization.
-          </p>
+          <div class="portfolio-tag">Power Automate · VBA · File System</div>
+          <p class="portfolio-desc">Automatically creates daily folders and sub‑structures for multiple departments, ensuring consistent naming, storage, and auditability.</p>
           <ul class="portfolio-meta">
             <li><strong>Problem:</strong> Staff manually created daily folders, causing inconsistency and wasted time.</li>
             <li><strong>Solution:</strong> Automation script that generates folders based on date, department, and task type.</li>
@@ -142,12 +452,10 @@
           </ul>
         </article>
 
-        <article class="portfolio-card">
+        <article class="portfolio-card card">
           <h3>Asset Tracking Automation</h3>
-          <p class="portfolio-tag">RPA · Excel · SharePoint</p>
-          <p class="portfolio-desc">
-            Automated asset tracking and status updates, integrating Excel records with SharePoint lists and notifications.
-          </p>
+          <div class="portfolio-tag">RPA · Excel · SharePoint</div>
+          <p class="portfolio-desc">Automated asset tracking and status updates, integrating Excel records with SharePoint lists and notifications.</p>
           <ul class="portfolio-meta">
             <li><strong>Problem:</strong> Asset records were updated manually and often out of sync.</li>
             <li><strong>Solution:</strong> RPA flow that syncs asset data and sends alerts for changes.</li>
@@ -155,12 +463,10 @@
           </ul>
         </article>
 
-        <article class="portfolio-card">
+        <article class="portfolio-card card">
           <h3>Loan Margin Model Automation</h3>
-          <p class="portfolio-tag">VBA · Banking · Risk</p>
-          <p class="portfolio-desc">
-            Automated loan margin calculations based on predefined risk and product parameters, replacing manual spreadsheet work.
-          </p>
+          <div class="portfolio-tag">VBA · Banking · Risk</div>
+          <p class="portfolio-desc">Automated loan margin calculations based on predefined risk and product parameters, replacing manual spreadsheet work.</p>
           <ul class="portfolio-meta">
             <li><strong>Problem:</strong> Manual margin calculations were time‑consuming and error‑prone.</li>
             <li><strong>Solution:</strong> VBA tool that standardizes inputs and outputs margin results instantly.</li>
@@ -168,44 +474,155 @@
           </ul>
         </article>
 
-        <!-- 你可以繼續加：Shutdown Detection, Laptop Borrowing System, Weekly IT Report, Email Downloader, Patch Tracker 等 -->
+        <!-- Add more portfolio-card blocks here for each tool you want to showcase -->
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <div class="card">
+        <div class="lang-en">
+          <h3>Fu Jen Catholic University — Master of Information Management</h3>
+          <div class="timeplace">Taiwan · 2011–2013</div>
+          <ul>
+            <li>Published thesis: A Study of Students' Forum Behaviors in a Blended E-Learning Environment.</li>
+            <li>Published in the 19th Cross-Strait Information Management Symposium.</li>
+          </ul>
+
+          <h3 style="margin-top:14px">Aletheia University — Bachelor of Information Management</h3>
+          <div class="timeplace">Taiwan · 2007–2011</div>
+          <ul>
+            <li>Government-funded AR Minnan Language Self-Learning System; awarded by National Science Council (NSC).</li>
+          </ul>
+        </div>
+
+        <div class="lang-zh hidden">
+          <h3>輔仁大學 — 資訊管理碩士</h3>
+          <div class="timeplace">台灣 · 2011–2013</div>
+          <ul>
+            <li>發表論文：混成式學習行為研究；刊登於第十九屆兩岸資訊管理研討會。</li>
+          </ul>
+
+          <h3 style="margin-top:14px">真理大學 — 資訊管理學士</h3>
+          <div class="timeplace">台灣 · 2007–2011</div>
+          <ul>
+            <li>以擴增實境為基礎之閩南語自學系統；獲國科會大專生研究計畫之殊榮。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="section">
+      <h2>Certifications</h2>
+      <div class="card">
+        <div class="lang-en">
+          <ul style="margin:0;padding-left:18px;color:var(--muted)">
+            <li>Cyber Safety & Safe AI Certification (Level 1–3) — Cyber Wardens · 2026</li>
+            <li>Stanford Code in Place — Stanford University · 2025</li>
+            <li>Project Management Essentials Certified (PMEC) — MSI · 2022</li>
+            <li>Oracle Certified Professional, Java SE 6 Programmer — Oracle · 2011</li>
+          </ul>
+        </div>
+        <div class="lang-zh hidden">
+          <ul style="margin:0;padding-left:18px;color:var(--muted)">
+            <li>Cyber Safety & Safe AI（Level 1–3）— Cyber Wardens · 2026</li>
+            <li>Stanford Code in Place — 史丹佛大學 · 2025</li>
+            <li>專案管理基礎認證（PMEC）— MSI · 2022</li>
+            <li>Oracle Java SE 6 專業認證 — Oracle · 2011</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quotes -->
+    <section id="quotes" class="section">
+      <h2>Quotes</h2>
+      <div class="card">
+        <div class="lang-en">
+          <blockquote>
+            <p>"Nothing is impossible, the word itself says 'I'm possible!'"</p>
+            <footer>— Audrey Hepburn</footer>
+          </blockquote>
+
+          <blockquote>
+            <p>"I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it."</p>
+            <footer>— Bill Gates</footer>
+          </blockquote>
+        </div>
+
+        <div class="lang-zh hidden">
+          <blockquote>
+            <p>「沒有什麼是不可能的，這個字本身就說了『我是可能的！』」</p>
+            <footer>— 奧黛麗·赫本（Audrey Hepburn）</footer>
+          </blockquote>
+
+          <blockquote>
+            <p>「我會選擇一個懶惰的人來做困難的工作，因為懶惰的人會找到簡單的方法來完成它。」</p>
+            <footer>— 比爾·蓋茲（Bill Gates）</footer>
+          </blockquote>
+        </div>
       </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="section">
       <h2>Contact</h2>
-      <p>Sydney, Australia</p>
-      <p>LinkedIn: https://www.linkedin.com/in/ulachen</p
+      <div class="card contact-list">
+        <div class="lang-en">
+          <p>Sydney, Australia</p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/your-id" target="_blank" rel="noopener">linkedin.com/in/ulachen</a></p>
+        </div>
+
+        <div class="lang-zh hidden">
+          <p>澳洲 雪梨</p>
+          <p>LinkedIn：<a href="https://www.linkedin.com/in/your-id" target="_blank" rel="noopener">linkedin.com/in/ulachen</a></p>
+        </div>
+      </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <p>© Li‑Wen · AI‑Driven Automation & IT Operations Specialist</p>
-  </footer>
+    <footer class="site-footer">
+      <div>© Li‑Wen · AI‑Driven Automation & IT Operations Specialist</div>
+    </footer>
+  </div>
 
+  <!-- Language toggle script -->
   <script>
-    const btnEn = document.getElementById('btn-en');
-    const btnZh = document.getElementById('btn-zh');
-    const enBlocks = document.querySelectorAll('.lang-en');
-    const zhBlocks = document.querySelectorAll('.lang-zh');
+    (function(){
+      const btnEn = document.getElementById('btn-en');
+      const btnZh = document.getElementById('btn-zh');
+      const enBlocks = document.querySelectorAll('.lang-en');
+      const zhBlocks = document.querySelectorAll('.lang-zh');
 
-    function setLang(lang) {
-      if (lang === 'en') {
-        enBlocks.forEach(el => el.classList.remove('hidden'));
-        zhBlocks.forEach(el => el.classList.add('hidden'));
-        btnEn.classList.add('active');
-        btnZh.classList.remove('active');
-      } else {
-        enBlocks.forEach(el => el.classList.add('hidden'));
-        zhBlocks.forEach(el => el.classList.remove('hidden'));
-        btnEn.classList.remove('active');
-        btnZh.classList.add('active');
+      function setLang(lang){
+        if(lang === 'en'){
+          enBlocks.forEach(e => e.classList.remove('hidden'));
+          zhBlocks.forEach(e => e.classList.add('hidden'));
+          btnEn.classList.add('active'); btnEn.setAttribute('aria-pressed','true');
+          btnZh.classList.remove('active'); btnZh.setAttribute('aria-pressed','false');
+          localStorage.setItem('site-lang','en');
+        } else {
+          enBlocks.forEach(e => e.classList.add('hidden'));
+          zhBlocks.forEach(e => e.classList.remove('hidden'));
+          btnEn.classList.remove('active'); btnEn.setAttribute('aria-pressed','false');
+          btnZh.classList.add('active'); btnZh.setAttribute('aria-pressed','true');
+          localStorage.setItem('site-lang','zh');
+        }
       }
-    }
 
-    btnEn.addEventListener('click', () => setLang('en'));
-    btnZh.addEventListener('click', () => setLang('zh'));
+      btnEn.addEventListener('click', ()=> setLang('en'));
+      btnZh.addEventListener('click', ()=> setLang('zh'));
+
+      // Initialize from localStorage or prefer-language
+      const saved = localStorage.getItem('site-lang');
+      if(saved === 'zh') setLang('zh');
+      else {
+        const lang = navigator.language || navigator.userLanguage || 'en';
+        if(lang.startsWith('zh')) setLang('zh'); else setLang('en');
+      }
+    })();
   </script>
 </body>
 </html>
+```
