@@ -26,7 +26,7 @@ body{
 /* Container */
 .wrap{max-width:var(--max-width);margin:28px auto;padding:24px}
 
-/* Header compact & balanced */
+/* Header: badge only */
 .site-header{
   display:flex;align-items:center;justify-content:space-between;gap:20px;
   padding:12px 20px;border-radius:12px;background:linear-gradient(90deg,var(--primary),var(--secondary));
@@ -37,9 +37,6 @@ body{
   width:48px;height:48px;border-radius:50%;background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(0,0,0,0.06));
   display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:#fff;flex:0 0 48px;box-shadow:0 6px 18px rgba(0,0,0,0.12);
 }
-.brand-text{min-width:0}
-.title{font-weight:800;font-size:1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.subtitle{font-size:0.78rem;color:rgba(255,255,255,0.9);opacity:0.95;white-space:nowrap}
 
 /* Nav */
 nav.main-nav{display:flex;gap:10px;align-items:center;margin-left:12px}
@@ -52,19 +49,20 @@ nav.main-nav a:hover{background:rgba(255,255,255,0.06)}
 .lang-btn{border:0;background:transparent;color:#fff;padding:6px 10px;border-radius:999px;cursor:pointer;font-weight:700;opacity:0.95}
 .lang-btn.active{background:var(--accent);color:#111}
 
-/* LinkedIn-like hero (wider, fixed left column) */
-.linkedIn-style{
-  display:flex;gap:24px;align-items:flex-start;padding:20px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfbfb);
-  margin:20px 0;box-shadow:0 10px 30px rgba(31,58,95,0.05);
-}
-.li-left{flex:0 0 420px;padding:14px;border-right:1px solid rgba(0,0,0,0.04)}
-.li-right{flex:1;padding:14px}
-.li-name{font-size:1.35rem;font-weight:900;color:var(--primary)}
-.li-role{margin-top:6px;color:var(--muted);font-weight:700}
-.li-location{margin-top:8px;color:var(--muted)}
-.li-contact{margin-top:10px;color:var(--muted)}
-.li-contact a{color:var(--primary);text-decoration:none;font-weight:700}
-.li-summary{margin:0;color:var(--muted)}
+/* HR-focused hero */
+.hero-hr{display:flex;gap:20px;align-items:flex-start;padding:18px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfbfb);margin:20px 0;box-shadow:0 10px 30px rgba(31,58,95,0.05)}
+.hr-left{flex:0 0 260px;padding:12px}
+.hr-right{flex:1;padding:12px}
+.role-pill{display:inline-block;background:linear-gradient(90deg,var(--primary),var(--secondary));color:#fff;padding:8px 12px;border-radius:999px;font-weight:800}
+.headline{margin-top:12px;font-size:1.05rem;font-weight:700;color:var(--primary)}
+.hr-summary{margin:12px 0;color:var(--muted)}
+.hr-stats{display:flex;gap:12px;margin:12px 0}
+.stat{background:linear-gradient(180deg,#fff,#fcfcfc);padding:10px;border-radius:10px;box-shadow:0 6px 18px rgba(31,58,95,0.04);text-align:center;min-width:110px}
+.stat strong{display:block;font-size:1.15rem;color:var(--primary)}
+.stat span{display:block;color:var(--muted);font-size:0.9rem}
+.hr-actions{display:flex;gap:10px;margin-top:12px}
+.btn-primary{background:var(--accent);color:#111;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:800}
+.btn-outline{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:10px 14px;border-radius:10px;text-decoration:none;color:var(--primary);font-weight:700}
 
 /* Sections */
 .section{padding:28px 0;border-bottom:1px solid rgba(0,0,0,0.03)}
@@ -73,7 +71,7 @@ nav.main-nav a:hover{background:rgba(255,255,255,0.06)}
 /* Card */
 .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 10px 30px rgba(31,58,95,0.04)}
 
-/* About quotes (always English) */
+/* About quotes always English */
 .about-quotes.always-en{margin-top:14px}
 blockquote{margin:0;padding:12px 14px;border-left:4px solid var(--accent);background:linear-gradient(90deg,rgba(201,168,106,0.04),transparent);border-radius:8px}
 blockquote p{margin:0;font-style:italic}
@@ -81,7 +79,7 @@ blockquote footer{margin-top:8px;font-size:0.9rem;color:var(--muted)}
 
 /* Timeline container */
 .timeline-card{position:relative;overflow:visible;padding:18px}
-.timeline-svg{position:absolute;left:0;right:0;top:0;width:100%;height:360px;pointer-events:none;opacity:0.95}
+.timeline-svg{position:absolute;left:0;right:0;top:0;width:100%;height:1200px;pointer-events:none;opacity:0.95}
 .timeline-items{position:relative;padding-top:48px;display:flex;flex-direction:column;gap:26px}
 
 /* Timeline item */
@@ -91,13 +89,19 @@ blockquote footer{margin-top:8px;font-size:0.9rem;color:var(--muted)}
   opacity:0; transform:translateY(18px);
 }
 .timeline-item.reveal{opacity:1;transform:translateY(0)}
-.timeline-item.alt{margin-left:64px}
+/* alternate items shift horizontally for visual rhythm */
+.timeline-item.alt{margin-left:48px}
 .node{
   width:20px;height:20px;border-radius:50%;background:linear-gradient(180deg,var(--accent),#e0c47a);border:4px solid var(--primary);
   box-shadow:0 8px 26px rgba(201,168,106,0.18);flex:0 0 20px;margin-top:6px;position:relative;
   transition:transform .28s ease;
+  animation:nodePulse 2.6s infinite;
 }
-.timeline-item:hover .node{transform:scale(1.06)}
+@keyframes nodePulse{
+  0%{transform:scale(1);box-shadow:0 6px 18px rgba(201,168,106,0.18)}
+  50%{transform:scale(1.06);box-shadow:0 18px 36px rgba(201,168,106,0.12)}
+  100%{transform:scale(1);box-shadow:0 6px 18px rgba(201,168,106,0.18)}
+}
 .content{flex:1}
 .content h3{margin:0 0 6px;font-size:1.06rem;color:var(--primary)}
 .content .timeplace{font-size:0.9rem;color:var(--muted);margin-bottom:8px}
@@ -107,7 +111,7 @@ blockquote footer{margin-top:8px;font-size:0.9rem;color:var(--muted)}
 .item-actions{margin-top:8px}
 .btn-more{background:transparent;border:1px solid var(--primary);color:var(--primary);padding:6px 10px;border-radius:8px;cursor:pointer}
 
-/* Skills: three pillars with personality */
+/* Skills */
 .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .skill-card{padding:16px;border-radius:12px;background:linear-gradient(180deg,#fff,#fcfcfc);box-shadow:0 8px 22px rgba(31,58,95,0.04)}
 .skill-card h3{margin:0 0 8px;color:var(--primary)}
@@ -117,7 +121,6 @@ blockquote footer{margin-top:8px;font-size:0.9rem;color:var(--muted)}
 .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
 .portfolio-card{border-top:4px solid var(--primary);padding:14px}
 .portfolio-tag{color:var(--secondary);font-size:0.85rem;margin-bottom:8px}
-.portfolio-meta{list-style:none;padding:0;margin:8px 0 0;color:var(--muted);font-size:0.92rem}
 
 /* Education */
 .timeplace{font-size:0.9rem;color:var(--muted);margin-bottom:8px}
@@ -136,15 +139,14 @@ blockquote footer{margin-top:8px;font-size:0.9rem;color:var(--muted)}
 /* Responsive */
 @media (max-width:1100px){
   .wrap{padding:16px}
-  .li-left{flex:0 0 360px}
   .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .timeline-item.alt{margin-left:36px}
 }
 @media (max-width:880px){
   nav.main-nav{display:none}
-  .linkedIn-style{flex-direction:column}
-  .li-left{width:100%;border-right:none;border-bottom:1px solid rgba(0,0,0,0.04);padding-bottom:12px}
-  .li-right{width:100%}
-  .timeline-svg{height:260px}
+  .hero-hr{flex-direction:column}
+  .hr-left{width:100%;border-right:none;border-bottom:1px solid rgba(0,0,0,0.04);padding-bottom:12px}
+  .timeline-svg{height:900px}
   .timeline-item{flex-direction:column;gap:12px}
   .timeline-item.alt{margin-left:0}
   .skills-grid{grid-template-columns:1fr}
