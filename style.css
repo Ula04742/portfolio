@@ -1,11 +1,10 @@
 :root{
-  --primary:#1E4D3A;    /* 松木綠 */
-  --secondary:#1F3A5F;  /* 靛藍 */
-  --bg:#F7F5F0;         /* 暖灰米白 */
-  --accent:#C9A86A;     /* 柔金色 */
+  --primary:#1E4D3A;
+  --secondary:#1F3A5F;
+  --bg:#F7F5F0;
+  --accent:#C9A86A;
   --muted:#6B6B6B;
   --card:#FFFFFF;
-  --glass: rgba(255,255,255,0.6);
   --radius:12px;
   --max-width:1100px;
   --shadow: 0 10px 30px rgba(31,58,95,0.08);
@@ -24,38 +23,36 @@ body{
   line-height:1.6;
 }
 
-/* Layout container */
+/* Container */
 .wrap{max-width:var(--max-width);margin:28px auto;padding:20px}
 
-/* Header */
+/* Header compact */
 .site-header{
-  display:flex;align-items:center;justify-content:space-between;gap:16px;
-  padding:18px;border-radius:14px;background:linear-gradient(90deg,var(--primary),var(--secondary));
-  color:#fff;box-shadow:var(--shadow);
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  padding:12px 20px;border-radius:12px;background:linear-gradient(90deg,var(--primary),var(--secondary));
+  color:#fff;box-shadow:var(--shadow);position:sticky;top:12px;z-index:40;
 }
-.brand{display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
 .logo{
-  width:56px;height:56px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(0,0,0,0.06));
-  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;color:#fff;
+  width:44px;height:44px;border-radius:50%;background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(0,0,0,0.06));
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:#fff;flex:0 0 44px;box-shadow:0 6px 18px rgba(0,0,0,0.12);
 }
-.title{font-weight:700;letter-spacing:0.02em}
-.subtitle{font-size:0.85rem;color:rgba(255,255,255,0.9)}
+.brand-text{min-width:0}
+.title{font-weight:700;font-size:0.98rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.subtitle{font-size:0.78rem;color:rgba(255,255,255,0.9);opacity:0.95;white-space:nowrap}
 
 /* Nav */
-nav.main-nav{display:flex;gap:10px;align-items:center}
-nav.main-nav a{
-  color:rgba(255,255,255,0.95);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600;font-size:0.95rem;
-}
+nav.main-nav{display:flex;gap:10px;align-items:center;margin-left:12px}
+nav.main-nav a{color:rgba(255,255,255,0.95);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600;font-size:0.92rem}
 nav.main-nav a:hover{background:rgba(255,255,255,0.06)}
 
 /* Lang toggle */
+.header-right{display:flex;align-items:center;gap:10px}
 .lang-toggle{display:flex;gap:8px}
-.lang-btn{
-  border:0;background:transparent;color:#fff;padding:6px 10px;border-radius:999px;cursor:pointer;font-weight:700;opacity:0.95;
-}
+.lang-btn{border:0;background:transparent;color:#fff;padding:6px 10px;border-radius:999px;cursor:pointer;font-weight:700;opacity:0.95}
 .lang-btn.active{background:var(--accent);color:#111}
 
-/* Hero — 強化對比，確保文字可見 */
+/* Hero */
 .hero{
   display:flex;gap:28px;align-items:flex-start;padding:28px;border-radius:12px;
   background:linear-gradient(135deg, rgba(30,77,58,0.95), rgba(31,58,95,0.9));
@@ -76,121 +73,73 @@ nav.main-nav a:hover{background:rgba(255,255,255,0.06)}
 /* Card */
 .card{background:var(--card);border-radius:var(--radius);padding:16px;box-shadow:0 8px 22px rgba(31,58,95,0.04)}
 
-/* Experience timeline container */
-.experience-list {
-  position:relative;
-  padding:24px 0 24px 48px;
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-  margin-bottom:6px;
-}
-
-/* vertical guide line */
-.experience-list::before{
-  content:"";
-  position:absolute;
-  left:24px;
-  top:12px;
-  bottom:12px;
-  width:4px;
-  background: linear-gradient(180deg, rgba(30,77,58,0.12), rgba(31,58,95,0.12));
-  border-radius:999px;
-  box-shadow:0 2px 8px rgba(30,77,58,0.04) inset;
-}
-
-/* each item */
-.experience-item{
-  position:relative;
-  padding:14px 18px;
-  background:linear-gradient(180deg,#fff,#fbfbfb);
-  border-radius:12px;
-  box-shadow:0 6px 18px rgba(31,58,95,0.04);
-  transition:transform .28s ease, box-shadow .28s ease;
-  overflow:visible;
-}
-
-/* node circle */
-.experience-item::before{
-  content:"";
-  position:absolute;
-  left:-48px; /* aligns with guide line */
-  top:18px;
-  width:18px;height:18px;border-radius:50%;
-  background:linear-gradient(180deg,var(--accent),#e0c47a);
-  border:4px solid var(--primary);
-  box-shadow:0 6px 18px rgba(201,168,106,0.18);
-}
-
-/* curved connector (decorative) */
-.experience-item::after{
-  content:"";
-  position:absolute;
-  left:-36px;
-  top:34px;
-  width:36px;height:18px;
-  border-bottom-left-radius:36px;
-  border-bottom-right-radius:36px;
-  background:linear-gradient(90deg, rgba(30,77,58,0.06), rgba(31,58,95,0.04));
-  transform-origin:left center;
-  transform: rotate(-12deg);
-  opacity:0.95;
-  filter: blur(0.2px);
-}
-
-/* hover effect */
-.experience-item:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 40px rgba(31,58,95,0.12);
-}
-
-/* item header */
-.experience-item h3{margin:0 0 6px;font-size:1.05rem;color:var(--primary)}
-.experience-item .timeplace{font-size:0.9rem;color:var(--muted);margin-bottom:8px}
-.experience-item ul{margin:8px 0 0 18px;color:var(--muted)}
-
-/* make alternating layout for visual rhythm (optional) */
-.experience-item.alt{
-  margin-left:36px;
-  transform-origin:left center;
-}
-.experience-item.alt::after{
-  left:-46px;
-  transform: rotate(12deg);
-  opacity:0.9;
-}
-
-/* small screens: simplify */
-@media (max-width:720px){
-  .wrap{padding:12px}
-  .hero{padding:18px}
-  .hero h1{font-size:1.4rem}
-  .experience-list{padding-left:28px}
-  .experience-item::before{left:-40px}
-  .experience-item::after{display:none}
-}
-
-/* Skills / Portfolio / other small tweaks */
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-.skill-card h3{margin:0 0 6px;color:var(--primary)}
-.skill-card p{margin:0;color:var(--muted);font-size:0.95rem}
-.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-.portfolio-card{border-top:4px solid var(--primary)}
-.portfolio-tag{color:var(--secondary);font-size:0.85rem;margin-bottom:8px}
-.portfolio-meta{list-style:none;padding:0;margin:8px 0 0;color:var(--muted);font-size:0.92rem}
-
-/* Quotes */
+/* About quotes */
 .about-quotes{display:grid;gap:10px;margin-top:12px}
 blockquote{margin:0;padding:12px 14px;border-left:4px solid var(--accent);background:linear-gradient(90deg,rgba(201,168,106,0.04),transparent);border-radius:8px}
 blockquote p{margin:0;font-style:italic}
 blockquote footer{margin-top:8px;font-size:0.9rem;color:var(--muted)}
 
+/* Experience timeline styles */
+.experience-wrap{position:relative;padding:8px 0}
+.timeline-svg{position:absolute;left:0;right:0;top:0;width:100%;height:300px;pointer-events:none;opacity:0.9}
+.timeline-items{position:relative;padding-top:24px;display:flex;flex-direction:column;gap:18px}
+
+/* timeline item */
+.timeline-item{
+  display:flex;gap:14px;align-items:flex-start;position:relative;padding:14px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfbfb);
+  box-shadow:0 6px 18px rgba(31,58,95,0.04);transition:transform .28s ease,box-shadow .28s ease;
+}
+.timeline-item.alt{margin-left:48px}
+.timeline-item:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(31,58,95,0.12)}
+.node{
+  width:18px;height:18px;border-radius:50%;background:linear-gradient(180deg,var(--accent),#e0c47a);border:4px solid var(--primary);
+  box-shadow:0 6px 18px rgba(201,168,106,0.18);flex:0 0 18px;margin-top:6px;position:relative;animation:nodePulse 2.6s infinite;
+}
+@keyframes nodePulse{
+  0%{transform:scale(1);box-shadow:0 6px 18px rgba(201,168,106,0.18)}
+  50%{transform:scale(1.08);box-shadow:0 18px 36px rgba(201,168,106,0.12)}
+  100%{transform:scale(1);box-shadow:0 6px 18px rgba(201,168,106,0.18)}
+}
+.item-body h3{margin:0 0 6px;font-size:1.05rem;color:var(--primary)}
+.item-body .timeplace{font-size:0.9rem;color:var(--muted);margin-bottom:8px}
+.item-body p{margin:0 0 8px;color:var(--muted)}
+.item-actions{display:flex;gap:10px;align-items:center}
+.btn-node{background:transparent;border:1px solid var(--primary);color:var(--primary);padding:6px 10px;border-radius:8px;cursor:pointer}
+.btn-link{color:var(--secondary);text-decoration:none;font-weight:600;padding:6px 8px;border-radius:8px;border:1px solid rgba(0,0,0,0.04)}
+
+/* Skills & portfolio */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.skill-card h3{margin:0 0 6px;color:var(--primary)}
+.skill-card p{margin:0;color:var(--muted);font-size:0.95rem}
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.portfolio-card{border-top:4px solid var(--primary);padding:14px}
+.portfolio-tag{color:var(--secondary);font-size:0.85rem;margin-bottom:8px}
+.portfolio-meta{list-style:none;padding:0;margin:8px 0 0;color:var(--muted);font-size:0.92rem}
+
 /* Contact */
 .contact-list p{margin:6px 0;color:var(--muted)}
 .contact-list a{color:var(--primary);text-decoration:none;font-weight:600}
 
+/* Modal */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:80}
+.modal.hidden{display:none}
+.modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,0.45)}
+.modal-panel{position:relative;background:#fff;border-radius:12px;padding:18px;max-width:880px;width:92%;z-index:90;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+.modal-close{position:absolute;right:12px;top:8px;border:0;background:transparent;font-size:22px;cursor:pointer}
+.modal-placeholder{padding:12px;color:var(--muted)}
+
 /* Footer */
 .site-footer{text-align:center;padding:18px 0;color:var(--muted);font-size:0.9rem}
 
-/* helper */
+/* Helpers */
 .hidden{display:none !important}
+.muted{color:var(--muted);font-size:0.9rem}
+
+/* Responsive */
+@media (max-width:880px){
+  nav.main-nav{display:none}
+  .hero{padding:18px}
+  .timeline-svg{height:220px}
+  .timeline-item{flex-direction:column;gap:8px}
+  .timeline-item.alt{margin-left:0}
+}
