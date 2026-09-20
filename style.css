@@ -1,12 +1,15 @@
 :root {
-  --ink: #1d2a35;
-  --muted: #61717d;
-  --line: #d9e1e5;
-  --paper: #f4f7f6;
-  --card: #ffffff;
-  --accent: #0d7772;
-  --accent-dark: #09504e;
-  --shadow: 0 16px 40px rgba(24, 49, 61, 0.08);
+  --ink: #24352d;
+  --muted: #66766a;
+  --line: #d8dfd2;
+  --paper: #eef3e9;
+  --card: #fffdf8;
+  --accent: #5d9561;
+  --moss: #a3b85a;
+  --wood: #b77845;
+  --wood-light: #f3e2cc;
+  --accent-dark: #245847;
+  --shadow: 0 16px 40px rgba(40, 74, 50, 0.12);
 }
 
 * {
@@ -20,7 +23,11 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  background: var(--paper);
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.62) 0 2px, transparent 2px 100%),
+    linear-gradient(25deg, rgba(131, 164, 105, 0.08) 0 1px, transparent 1px 100%);
+  background-size: 34px 34px, 52px 52px;
   font-family: "Segoe UI", "Noto Sans", sans-serif;
   line-height: 1.65;
 }
@@ -38,9 +45,9 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 18px 0;
-  background: rgba(244, 247, 246, 0.94);
-  border-bottom: 1px solid rgba(217, 225, 229, 0.8);
+  padding: 18px 24px;
+  background: rgba(238, 243, 233, 0.94);
+  border-bottom: 1px solid rgba(180, 199, 174, 0.85);
   backdrop-filter: blur(12px);
 }
 
@@ -62,14 +69,14 @@ a {
 }
 
 .main-nav a:hover {
-  color: var(--accent);
+  color: var(--wood);
 }
 
 .lang-toggle {
   display: flex;
   gap: 4px;
   padding: 4px;
-  background: #e4ecea;
+  background: #dce9d2;
   border-radius: 8px;
 }
 
@@ -105,7 +112,6 @@ a {
   overflow: hidden;
   background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 12px;
   box-shadow: var(--shadow);
 }
 
@@ -118,14 +124,16 @@ a {
   display: flex;
   align-items: center;
   background: var(--accent-dark);
+  border-right: 8px solid var(--wood);
   color: #fff;
 }
 
 .person-name {
   margin-bottom: 16px;
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(1.65rem, 4vw, 2.75rem);
   font-weight: 800;
   line-height: 1.05;
+  white-space: nowrap;
 }
 
 .person-location,
@@ -151,8 +159,8 @@ a {
 .btn-linkedin {
   display: inline-block;
   padding: 9px 14px;
-  color: var(--accent-dark);
-  background: #fff;
+  color: #fff;
+  background: var(--wood);
   text-decoration: none;
 }
 
@@ -181,8 +189,8 @@ a {
 
 .stat {
   padding: 14px;
-  background: #edf4f2;
-  border-left: 3px solid var(--accent);
+  background: #e5efd9;
+  border-left: 3px solid var(--moss);
 }
 
 .stat strong,
@@ -207,8 +215,8 @@ a {
 .skill-pill {
   padding: 9px 11px;
   color: var(--accent-dark);
-  background: #f0f6f4;
-  border: 1px solid #cfe2de;
+  background: #edf4df;
+  border: 1px solid #c8d8b5;
   border-radius: 6px;
   font-size: 0.82rem;
   font-weight: 700;
@@ -222,6 +230,7 @@ a {
   margin: 0 0 14px;
   font-size: clamp(1.5rem, 3vw, 2.2rem);
   line-height: 1.2;
+  color: var(--accent-dark);
 }
 
 .card,
@@ -230,7 +239,7 @@ a {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(24, 49, 61, 0.05);
+  box-shadow: 0 8px 24px rgba(54, 91, 59, 0.08);
 }
 
 .about-card,
@@ -261,8 +270,8 @@ blockquote {
   margin: 0;
   padding: 18px 22px;
   color: var(--accent-dark);
-  background: #eaf3f0;
-  border-left: 4px solid var(--accent);
+  background: var(--wood-light);
+  border-left: 4px solid var(--moss);
 }
 
 blockquote p {
@@ -287,7 +296,7 @@ blockquote footer {
   left: 8px;
   width: 2px;
   content: "";
-  background: #cfe2de;
+  background: #bfd1b7;
 }
 
 .timeline-item {
@@ -303,8 +312,8 @@ blockquote footer {
   width: 18px;
   height: 18px;
   margin-top: 5px;
-  background: var(--accent);
-  border: 4px solid #eaf3f0;
+  background: var(--moss);
+  border: 4px solid var(--wood-light);
   border-radius: 50%;
 }
 
@@ -340,7 +349,9 @@ blockquote footer {
 
 .skills-grid,
 .cert-grid {
+  display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
 }
 
 .skill-card,
@@ -381,7 +392,7 @@ blockquote footer {
   width: 40px;
   height: 40px;
   color: #fff;
-  background: var(--accent-dark);
+  background: var(--wood);
   border: 0;
   border-radius: 50%;
   cursor: pointer;
