@@ -136,7 +136,7 @@ blockquote footer{margin-top:8px;font-size:0.9rem;color:var(--muted)}
 }
 
 /* Certification card (no logo version) */
-.cert-item.no-logo{
+.cert-item{
   padding:20px;
   border-radius:12px;
   background:#fff;
