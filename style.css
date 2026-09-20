@@ -71,10 +71,10 @@ body{
 }
 
 .name-block{padding:6px}
-.person-name{font-weight:900;font-size:1.25rem;color:var(--primary);line-height:1.25}
+.person-name{font-weight:900;font-size:2rem;color:var(--primary);line-height:1.5}
 .person-meta{margin-top:8px}
-.person-location{font-size:0.95rem;color:var(--muted);margin-bottom:8px;line-height:1.4}
-.person-title{font-size:0.88rem;color:var(--muted);line-height:1.45}
+.person-location{font-size:0.95rem;color:var(--muted);margin-bottom:8px;line-height:1.5}
+.person-title{font-size:0.95rem;color:var(--muted);line-height:1.45}
 .contact-inline{margin-top:12px;display:flex;align-items:center;gap:12px}
 .btn-linkedin{display:inline-block;background:linear-gradient(90deg,var(--accent),#d9b86a);color:#111;padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:800}
 
