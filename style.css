@@ -147,18 +147,29 @@ blockquote footer{margin-top:8px;font-size:0.9rem;color:var(--muted)}
 }
 
 /* ★ 修正：統一 icon 大小 */
+/* Base logo frame */
 .cert-logo{
-  width:64px;   /* 原本 100px → 改成更一致的大小 */
+  width:64px;
   height:64px;
   display:flex;
   align-items:center;
   justify-content:center;
+  background:#fff;
+  border-radius:10px;
 }
 
+/* Individual padding adjustments */
+.logo-uncclearn { padding:8px; }
+.logo-oracle { padding:4px; }
+.logo-msi { padding:14px; }
+.logo-stanford { padding:10px; }
+.logo-cyberwardens { padding:8px; }
+
+/* Image scaling */
 .cert-logo img{
   width:100%;
   height:100%;
-  object-fit:contain; /* 保持比例不變形 */
+  object-fit:contain;
 }
 
 .cert-meta .cert-title{font-weight:700}
