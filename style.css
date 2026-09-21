@@ -209,17 +209,25 @@ a {
 
 .hr-skills {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 14px;
+  margin-top: 18px;
+  align-items: stretch;
 }
 
 .skill-pill {
-  padding: 9px 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  padding: 16px 14px;
   color: var(--accent-dark);
-  background: #edf4df;
-  border: 1px solid #c8d8b5;
-  border-radius: 6px;
-  font-size: 0.82rem;
+  background: rgba(236, 244, 224, 0.9);
+  border: 1px solid rgba(138, 161, 112, 0.8);
+  border-radius: 12px;
+  font-size: clamp(0.88rem, 1.3vw, 1.35rem);
   font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .section {
@@ -259,28 +267,50 @@ a {
   margin-bottom: 0;
 }
 
+.quote-block {
+  margin-top: 18px;
+  padding-top: 4px;
+}
+
+.quote-heading {
+  margin: 0 0 10px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(57, 65, 57, 0.66);
+}
+
 .about-quotes {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
-  margin-top: 18px;
 }
 
 blockquote {
   margin: 0;
-  padding: 18px 22px;
-  color: var(--accent-dark);
-  background: var(--wood-light);
-  border-left: 4px solid var(--moss);
+  padding: 18px 18px 14px;
+  color: rgba(46, 53, 48, 0.86);
+  background: rgba(244, 239, 232, 0.42);
+  border-left: 1px solid rgba(123, 142, 105, 0.5);
+  border-radius: 10px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 blockquote p {
   margin: 0 0 8px;
+  font-size: clamp(0.8rem, 1.15vw, 1rem);
+  line-height: 1.55;
+  font-weight: 400;
+  font-style: italic;
 }
 
 blockquote footer {
-  color: var(--muted);
-  font-size: 0.9rem;
+  color: rgba(46, 53, 48, 0.66);
+  font-size: 0.7rem;
 }
 
 .timeline-items {
@@ -288,7 +318,6 @@ blockquote footer {
   display: grid;
   gap: 28px;
 }
-
 .timeline-items::before {
   position: absolute;
   top: 10px;
@@ -329,6 +358,8 @@ blockquote footer {
 }
 
 .item-actions {
+  display: flex;
+  justify-content: flex-end;
   margin-top: 12px;
 }
 
